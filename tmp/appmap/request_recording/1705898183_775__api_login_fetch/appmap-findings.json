@@ -1,0 +1,520 @@
+{
+  "configuration": {
+    "checks": [
+      {
+        "rule": "authz-before-authn"
+      },
+      {
+        "rule": "deprecated-crypto-algorithm"
+      },
+      {
+        "rule": "deserialization-of-untrusted-data"
+      },
+      {
+        "rule": "exec-of-untrusted-command"
+      },
+      {
+        "rule": "http-500"
+      },
+      {
+        "rule": "logout-without-session-reset"
+      },
+      {
+        "rule": "missing-content-type"
+      },
+      {
+        "rule": "n-plus-one-query"
+      },
+      {
+        "rule": "secret-in-log"
+      },
+      {
+        "rule": "too-many-joins"
+      },
+      {
+        "rule": "too-many-updates"
+      },
+      {
+        "rule": "unauthenticated-encryption"
+      },
+      {
+        "rule": "update-in-get-request"
+      }
+    ],
+    "timestampMs": 1705561805031
+  },
+  "appMapMetadata": {
+    "D:\\java\\HRBP FEEDBACK SYSTEM\\HRBP-FEEDBACK-SYSTEM\\tmp\\appmap\\request_recording\\1705898183_775__api_login_fetch.appmap.json": {
+      "name": "POST /api/login/fetch (200) - 10:06:23.775",
+      "recording": {}
+    }
+  },
+  "findings": [
+    {
+      "appMapFile": "D:\\java\\HRBP FEEDBACK SYSTEM\\HRBP-FEEDBACK-SYSTEM\\tmp\\appmap\\request_recording\\1705898183_775__api_login_fetch.appmap.json",
+      "checkId": "too-many-joins",
+      "ruleId": "too-many-joins",
+      "ruleTitle": "Too many joins",
+      "event": {
+        "event": "call",
+        "id": 5,
+        "sql_query": {
+          "database_type": "MySQL",
+          "sql": "select e1_0.employee_id,bh1_0.employee_id,bh1_0.bu_head_id,d1_0.departmentid,d1_0.department_name,bh1_0.first_name,bh1_0.hire_date,bh1_0.job_title,bh1_0.last_name,m1_0.employee_id,m1_0.bu_head_id,m1_0.department_id,m1_0.first_name,m1_0.hire_date,m1_0.job_title,m1_0.last_name,m1_0.manager_id,m1_0.role_id,bh1_0.role_id,d3_0.departmentid,d3_0.department_name,e1_0.first_name,e1_0.hire_date,e1_0.job_title,e1_0.last_name,m3_0.employee_id,bh4_0.employee_id,bh4_0.bu_head_id,bh4_0.department_id,bh4_0.first_name,bh4_0.hire_date,bh4_0.job_title,bh4_0.last_name,bh4_0.manager_id,bh4_0.role_id,d5_0.departmentid,d5_0.department_name,m3_0.first_name,m3_0.hire_date,m3_0.job_title,m3_0.last_name,m3_0.manager_id,m3_0.role_id,e1_0.role_id from employeemastertable e1_0 left join employeemastertable bh1_0 on bh1_0.employee_id=e1_0.bu_head_id left join departments d1_0 on d1_0.departmentid=bh1_0.department_id left join employeemastertable m1_0 on m1_0.employee_id=bh1_0.manager_id left join departments d3_0 on d3_0.departmentid=e1_0.department_id left join employeemastertable m3_0 on m3_0.employee_id=e1_0.manager_id left join employeemastertable bh4_0 on bh4_0.employee_id=m3_0.bu_head_id left join departments d5_0 on d5_0.departmentid=m3_0.department_id where e1_0.employee_id=?"
+        },
+        "thread_id": 35
+      },
+      "hash": "ba2510f92182f35f01c0ba94837bf9cecda8c22ce1f5704b4e8e71c6ea70203c",
+      "hash_v2": "c41a58f1fa95c41c78e924c25c1ff49c73ad72359d75b34ad67137a46035d406",
+      "stack": [
+        "com/hrbp/feedback/repository/EmployeeRepository.java:-1",
+        "com/hrbp/feedback/service/EmployeeService.java:21",
+        "com/hrbp/feedback/controller/LoginController.java:24"
+      ],
+      "scope": {
+        "event": "call",
+        "http_server_request": {
+          "headers": {
+            "content-length": "3",
+            "postman-token": "708392d9-54cf-41be-9c15-93ab067b2667",
+            "host": "localhost:9292",
+            "content-type": "application/json",
+            "connection": "keep-alive",
+            "accept-encoding": "gzip, deflate, br",
+            "user-agent": "PostmanRuntime/7.36.1",
+            "accept": "*/*"
+          },
+          "normalized_path_info": "/api/login/fetch",
+          "path_info": "/api/login/fetch",
+          "protocol": "HTTP/1.1",
+          "request_method": "POST"
+        },
+        "id": 1,
+        "thread_id": 35
+      },
+      "message": "7 joins in SQL \"select e1_0.employee_id,bh1_0.employee_id,bh1_0.bu_head_id,d1_0.departmentid,d1_0.department_name,bh1_0.first_name,bh1_0.hire_date,bh1_0.job_title,bh1_0.last_name,m1_0.employee_id,m1_0.bu_head_id,m1_0.department_id,m1_0.first_name,m1_0.hire_date,m1_0.job_title,m1_0.last_name,m1_0.manager_id,m1_0.role_id,bh1_0.role_id,d3_0.departmentid,d3_0.department_name,e1_0.first_name,e1_0.hire_date,e1_0.job_title,e1_0.last_name,m3_0.employee_id,bh4_0.employee_id,bh4_0.bu_head_id,bh4_0.department_id,bh4_0.first_name,bh4_0.hire_date,bh4_0.job_title,bh4_0.last_name,bh4_0.manager_id,bh4_0.role_id,d5_0.departmentid,d5_0.department_name,m3_0.first_name,m3_0.hire_date,m3_0.job_title,m3_0.last_name,m3_0.manager_id,m3_0.role_id,e1_0.role_id from employeemastertable e1_0 left join employeemastertable bh1_0 on bh1_0.employee_id=e1_0.bu_head_id left join departments d1_0 on d1_0.departmentid=bh1_0.department_id left join employeemastertable m1_0 on m1_0.employee_id=bh1_0.manager_id left join departments d3_0 on d3_0.departmentid=e1_0.department_id left join employeemastertable m3_0 on m3_0.employee_id=e1_0.manager_id left join employeemastertable bh4_0 on bh4_0.employee_id=m3_0.bu_head_id left join departments d5_0 on d5_0.departmentid=m3_0.department_id where e1_0.employee_id=?\"",
+      "relatedEvents": [
+        {
+          "event": "call",
+          "id": 5,
+          "sql_query": {
+            "database_type": "MySQL",
+            "sql": "select e1_0.employee_id,bh1_0.employee_id,bh1_0.bu_head_id,d1_0.departmentid,d1_0.department_name,bh1_0.first_name,bh1_0.hire_date,bh1_0.job_title,bh1_0.last_name,m1_0.employee_id,m1_0.bu_head_id,m1_0.department_id,m1_0.first_name,m1_0.hire_date,m1_0.job_title,m1_0.last_name,m1_0.manager_id,m1_0.role_id,bh1_0.role_id,d3_0.departmentid,d3_0.department_name,e1_0.first_name,e1_0.hire_date,e1_0.job_title,e1_0.last_name,m3_0.employee_id,bh4_0.employee_id,bh4_0.bu_head_id,bh4_0.department_id,bh4_0.first_name,bh4_0.hire_date,bh4_0.job_title,bh4_0.last_name,bh4_0.manager_id,bh4_0.role_id,d5_0.departmentid,d5_0.department_name,m3_0.first_name,m3_0.hire_date,m3_0.job_title,m3_0.last_name,m3_0.manager_id,m3_0.role_id,e1_0.role_id from employeemastertable e1_0 left join employeemastertable bh1_0 on bh1_0.employee_id=e1_0.bu_head_id left join departments d1_0 on d1_0.departmentid=bh1_0.department_id left join employeemastertable m1_0 on m1_0.employee_id=bh1_0.manager_id left join departments d3_0 on d3_0.departmentid=e1_0.department_id left join employeemastertable m3_0 on m3_0.employee_id=e1_0.manager_id left join employeemastertable bh4_0 on bh4_0.employee_id=m3_0.bu_head_id left join departments d5_0 on d5_0.departmentid=m3_0.department_id where e1_0.employee_id=?"
+          },
+          "thread_id": 35
+        }
+      ],
+      "impactDomain": "Performance",
+      "participatingEvents": {}
+    }
+  ],
+  "checks": [
+    {
+      "rule": {
+        "id": "authz-before-authn",
+        "title": "Authorization performed before authentication",
+        "labels": [
+          "security.authorization",
+          "security.authentication"
+        ],
+        "scope": "http_server_request",
+        "impactDomain": "Security",
+        "enumerateScope": false,
+        "references": {
+          "CWE-863": "https://cwe.mitre.org/data/definitions/863.html"
+        },
+        "description": "Determines when authorization logic is applied to a user identity that has not been properly verified. Because the the user's identity has not been verified yet, the outcome of the authorization check cannot be trusted. A malicious user might be able to get themselves authorized as a different user than they really are - or they may not be logged in at all.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#authz-before-authn"
+      },
+      "id": "authz-before-authn",
+      "options": {},
+      "scope": "http_server_request",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Security"
+    },
+    {
+      "rule": {
+        "id": "deprecated-crypto-algorithm",
+        "title": "Deprecated cryptographic algorithm",
+        "description": "---\nrule: deprecated-crypto-algorithm\nname: Deprecated crypto algorithm\ntitle: Deprecated cryptographic algorithm\nreferences:\n  A02:2021: https://owasp.org/Top10/A02_2021-Cryptographic_Failures/\nimpactDomain: Security\nlabels:\n  - crypto.encrypt\n  - crypto.decrypt\n  - crypto.digest\nscope: root\n---\n\nEnsure that cryptographic operations do not use deprecated algorithms.\n",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#deprecated-crypto-algorithm",
+        "labels": [
+          "crypto.encrypt",
+          "crypto.decrypt",
+          "crypto.digest"
+        ],
+        "scope": "root",
+        "enumerateScope": true,
+        "impactDomain": "Security",
+        "references": {
+          "A02:2021": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/"
+        }
+      },
+      "id": "deprecated-crypto-algorithm",
+      "options": {},
+      "scope": "root",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Security"
+    },
+    {
+      "rule": {
+        "id": "deserialization-of-untrusted-data",
+        "title": "Deserialization of untrusted data",
+        "labels": [
+          "deserialize.unsafe",
+          "deserialize.safe",
+          "deserialize.sanitize"
+        ],
+        "impactDomain": "Security",
+        "enumerateScope": false,
+        "scope": "http_server_request",
+        "references": {
+          "CWE-502": "https://cwe.mitre.org/data/definitions/502.html",
+          "Ruby Security": "https://docs.ruby-lang.org/en/3.0/doc/security_rdoc.html"
+        },
+        "description": "Finds occurrances of deserialization in which the mechanism employed is known to be unsafe, and the data comes from an untrusted source and hasn't passed through a sanitization mechanism.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#deserialization-of-untrusted-data"
+      },
+      "id": "deserialization-of-untrusted-data",
+      "options": {},
+      "scope": "http_server_request",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Security"
+    },
+    {
+      "rule": {
+        "id": "exec-of-untrusted-command",
+        "title": "Execution of untrusted system command",
+        "labels": [
+          "system.exec",
+          "system.exec.safe",
+          "system.exec.sanitize"
+        ],
+        "impactDomain": "Security",
+        "enumerateScope": false,
+        "references": {
+          "CWE-78": "https://cwe.mitre.org/data/definitions/78.html"
+        },
+        "description": "Find occurrances of system command execution in which the command string is not guaranteed to be safe.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#exec-of-untrusted-command"
+      },
+      "id": "exec-of-untrusted-command",
+      "options": {},
+      "scope": "command",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Security"
+    },
+    {
+      "rule": {
+        "id": "http-500",
+        "title": "HTTP 500 status code",
+        "description": "Identifies when an HTTP server request has returned a 500 status code. HTTP 500 status code generally indicate an unanticipated problem in the backend that is not handled in a predictable way. 500 status codes are also hard for client code to handle, because they don't indicate any particular problem or suggest a solution.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#http-500",
+        "labels": [],
+        "scope": "http_server_request",
+        "enumerateScope": false,
+        "impactDomain": "Stability",
+        "references": {
+          "CWE-392": "https://cwe.mitre.org/data/definitions/392.html"
+        }
+      },
+      "id": "http-500",
+      "options": {},
+      "scope": "http_server_request",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Stability"
+    },
+    {
+      "rule": {
+        "id": "logout-without-session-reset",
+        "title": "Logout without session reset",
+        "scope": "http_server_request",
+        "labels": [
+          "http.session.clear",
+          "security.logout"
+        ],
+        "impactDomain": "Security",
+        "enumerateScope": false,
+        "references": {
+          "CWE-488": "https://cwe.mitre.org/data/definitions/488.html",
+          "OWASP - Session fixation": "https://owasp.org/www-community/attacks/Session_fixation",
+          "Ruby on Rails - Session fixation countermeasures": "https://guides.rubyonrails.org/security.html#session-fixation-countermeasures"
+        },
+        "description": "Determines when a user has been logged out from the application, but the session hasn't been cleared. When the session isn't cleared after logout, the session is vulnerable to a [session fixation attack](https://owasp.org/www-community/attacks/Session_fixation).",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#logout-without-session-reset"
+      },
+      "id": "logout-without-session-reset",
+      "options": {},
+      "scope": "http_server_request",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Security"
+    },
+    {
+      "rule": {
+        "id": "missing-content-type",
+        "title": "HTTP server request without a Content-Type header",
+        "scope": "http_server_request",
+        "impactDomain": "Stability",
+        "enumerateScope": false,
+        "description": "Finds HTTP server requests that don't provide a `Content-Type` header in the response.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#missing-content-type"
+      },
+      "id": "missing-content-type",
+      "options": {},
+      "scope": "http_server_request",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Stability"
+    },
+    {
+      "rule": {
+        "id": "n-plus-one-query",
+        "title": "N plus 1 SQL query",
+        "scope": "command",
+        "impactDomain": "Performance",
+        "enumerateScope": false,
+        "references": {
+          "CWE-1073": "https://cwe.mitre.org/data/definitions/1073.html"
+        },
+        "description": "Finds occurrences of a query being repeated within a loop.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#n-plus-one-query"
+      },
+      "id": "n-plus-one-query",
+      "options": {
+        "warningLimit": 5,
+        "errorLimit": 10
+      },
+      "scope": "command",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Performance"
+    },
+    {
+      "rule": {
+        "id": "secret-in-log",
+        "title": "Secret in log",
+        "labels": [
+          "secret",
+          "log"
+        ],
+        "scope": "root",
+        "impactDomain": "Security",
+        "enumerateScope": true,
+        "references": {
+          "CWE-532": "https://cwe.mitre.org/data/definitions/532.html"
+        },
+        "description": "Identifies when a known or assumed secret is written to a log. Logs are often transported into other systems that are treated with lesser security - such as backups. Therefore, secrets written into log files are more likely to be leaked or discovered by cyber-attackers.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#secret-in-log"
+      },
+      "id": "secret-in-log",
+      "options": {},
+      "scope": "root",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Security"
+    },
+    {
+      "rule": {
+        "id": "too-many-joins",
+        "title": "Too many joins",
+        "description": "Verifies that the number of joins in SQL queries does not exceed a threshold.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#too-many-joins",
+        "labels": [],
+        "enumerateScope": false,
+        "impactDomain": "Performance",
+        "references": {
+          "CWE-1049": "https://cwe.mitre.org/data/definitions/1049.html"
+        }
+      },
+      "id": "too-many-joins",
+      "options": {
+        "warningLimit": 5,
+        "excludeTables": [
+          {
+            "match": {},
+            "ignoreCase": false
+          },
+          {
+            "equal": "information_schema",
+            "ignoreCase": false
+          }
+        ]
+      },
+      "scope": "command",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Performance"
+    },
+    {
+      "rule": {
+        "id": "too-many-updates",
+        "title": "Too many SQL and RPC updates performed in one command",
+        "scope": "command",
+        "enumerateScope": false,
+        "impactDomain": "Maintainability",
+        "references": {
+          "CWE-1048": "https://cwe.mitre.org/data/definitions/1048.html"
+        },
+        "description": "Verifies that the number of SQL and RPC updates performed by a command does not exceed a threshold.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#too-many-updates"
+      },
+      "id": "too-many-updates",
+      "options": {
+        "warningLimit": 20
+      },
+      "scope": "command",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Maintainability"
+    },
+    {
+      "rule": {
+        "id": "unauthenticated-encryption",
+        "title": "Unauthenticated encryption",
+        "description": "Ensures that encryption operations use authenticated encryption.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#unauthenticated-encryption",
+        "labels": [
+          "crypto.encrypt",
+          "crypto.set_auth_data"
+        ],
+        "enumerateScope": true,
+        "impactDomain": "Security",
+        "references": {
+          "A02:2021": "https://owasp.org/Top10/A02_2021-Cryptographic_Failures/"
+        }
+      },
+      "id": "unauthenticated-encryption",
+      "options": {},
+      "scope": "command",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Security"
+    },
+    {
+      "rule": {
+        "id": "update-in-get-request",
+        "title": "Data update performed in GET or HEAD request",
+        "scope": "http_server_request",
+        "enumerateScope": true,
+        "labels": [
+          "audit"
+        ],
+        "impactDomain": "Maintainability",
+        "description": "Finds SQL updates that are performed in an HTTP server `GET` request.",
+        "url": "https://appland.com/docs/analysis/rules-reference.html#update-in-get-request"
+      },
+      "id": "update-in-get-request",
+      "options": {
+        "_queryInclude": [
+          {},
+          {}
+        ],
+        "_queryExclude": []
+      },
+      "scope": "http_server_request",
+      "includeScope": [],
+      "excludeScope": [],
+      "includeEvent": [],
+      "excludeEvent": [],
+      "impactDomain": "Maintainability"
+    }
+  ],
+  "summary": {
+    "numAppMaps": 1,
+    "numChecks": 13,
+    "rules": [
+      "authz-before-authn",
+      "deprecated-crypto-algorithm",
+      "deserialization-of-untrusted-data",
+      "exec-of-untrusted-command",
+      "http-500",
+      "logout-without-session-reset",
+      "missing-content-type",
+      "n-plus-one-query",
+      "secret-in-log",
+      "too-many-joins",
+      "too-many-updates",
+      "unauthenticated-encryption",
+      "update-in-get-request"
+    ],
+    "ruleLabels": [
+      "audit",
+      "crypto.decrypt",
+      "crypto.digest",
+      "crypto.encrypt",
+      "crypto.set_auth_data",
+      "deserialize.safe",
+      "deserialize.sanitize",
+      "deserialize.unsafe",
+      "http.session.clear",
+      "log",
+      "secret",
+      "security.authentication",
+      "security.authorization",
+      "security.logout",
+      "system.exec",
+      "system.exec.safe",
+      "system.exec.sanitize"
+    ],
+    "numFindings": 1,
+    "appMapMetadata": {
+      "labels": [],
+      "apps": [
+        "HRBP-FEEDBACK-SYSTEM"
+      ],
+      "clients": [
+        {
+          "name": "appmap-java",
+          "url": "https://github.com/appland/appmap-java"
+        }
+      ],
+      "frameworks": [],
+      "git": [],
+      "languages": [
+        {
+          "name": "java",
+          "version": "17.0.9+11-LTS-201",
+          "engine": "Java HotSpot(TM) 64-Bit Server VM"
+        }
+      ],
+      "recorders": [
+        {
+          "name": "request_recording",
+          "type": "requests"
+        }
+      ],
+      "testStatuses": [],
+      "exceptions": []
+    }
+  }
+}

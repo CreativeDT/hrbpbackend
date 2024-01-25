@@ -1,0 +1,80 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "deleteFeedbackById",
+                        "type": "function",
+                        "static": false,
+                        "location": "com/hrbp/feedback/service/FeedbackService.java:46"
+                      }
+                    ],
+                    "name": "FeedbackService",
+                    "type": "class"
+                  }
+                ],
+                "name": "service",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "deleteFeedback",
+                        "type": "function",
+                        "static": false,
+                        "location": "com/hrbp/feedback/controller/FeedbackController.java:58"
+                      }
+                    ],
+                    "name": "FeedbackController",
+                    "type": "class"
+                  }
+                ],
+                "name": "controller",
+                "type": "package"
+              }
+            ],
+            "name": "feedback",
+            "type": "package"
+          }
+        ],
+        "name": "hrbp",
+        "type": "package"
+      }
+    ],
+    "name": "com",
+    "type": "package"
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "DELETE /api/feedback/delete-feedback/{id}"
+      }
+    ]
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "children": [
+      {
+        "type": "query",
+        "name": "select f1_0.ticket_id,f1_0.assigned_manager_id,f1_0.creator_id,f1_0.date_created,f1_0.last_status_change_date,f1_0.status,f1_0.ticket_details from feedbacktable f1_0 where f1_0.ticket_id=?"
+      },
+      {
+        "type": "query",
+        "name": "delete from feedbacktable where ticket_id=?"
+      }
+    ]
+  }
+]

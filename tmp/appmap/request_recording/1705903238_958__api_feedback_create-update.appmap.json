@@ -1,0 +1,279 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "headers": {
+          "content-length": "140",
+          "postman-token": "536a54e3-ce01-42a8-8b0e-14997756a8df",
+          "host": "localhost:9292",
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip, deflate, br",
+          "user-agent": "PostmanRuntime/7.36.1",
+          "accept": "*/*"
+        },
+        "normalized_path_info": "/api/feedback/create-update",
+        "path_info": "/api/feedback/create-update",
+        "protocol": "HTTP/1.1",
+        "request_method": "POST"
+      },
+      "id": 1,
+      "thread_id": 39
+    },
+    {
+      "defined_class": "com.hrbp.feedback.controller.FeedbackController",
+      "event": "call",
+      "id": 2,
+      "lineno": 30,
+      "method_id": "createOrUpdateFeedback",
+      "parameters": [
+        {
+          "class": "com.hrbp.feedback.entity.Feedback",
+          "kind": "req",
+          "name": "feedback",
+          "object_id": 785866603,
+          "value": "Feedback(ticketId=0, creatorId=2, assignedManagerId=2, ticketDetails=Testing the update of feeadback , status=on, dateCreated=null, lastStatusChangeDate=null)"
+        }
+      ],
+      "path": "com/hrbp/feedback/controller/FeedbackController.java",
+      "receiver": {
+        "class": "com.hrbp.feedback.controller.FeedbackController",
+        "object_id": 1277480734,
+        "value": "com.hrbp.feedback.controller.FeedbackController@4c24cf1e"
+      },
+      "static": false,
+      "thread_id": 39
+    },
+    {
+      "defined_class": "com.hrbp.feedback.service.EmployeeService",
+      "event": "call",
+      "id": 3,
+      "lineno": 21,
+      "method_id": "findEmployeeById",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "employeeID",
+          "object_id": 1522565136,
+          "value": "2"
+        }
+      ],
+      "path": "com/hrbp/feedback/service/EmployeeService.java",
+      "receiver": {
+        "class": "com.hrbp.feedback.service.EmployeeService",
+        "object_id": 1808977222,
+        "value": "com.hrbp.feedback.service.EmployeeService@6bd2cd46"
+      },
+      "static": false,
+      "thread_id": 39
+    },
+    {
+      "defined_class": "com.hrbp.feedback.repository.EmployeeRepository",
+      "event": "call",
+      "id": 4,
+      "lineno": -1,
+      "method_id": "findById",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 1522565136,
+          "value": "2"
+        }
+      ],
+      "path": "com/hrbp/feedback/repository/EmployeeRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy176",
+        "object_id": 563766787,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@3519be05"
+      },
+      "static": false,
+      "thread_id": 39
+    },
+    {
+      "event": "call",
+      "id": 5,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select e1_0.employee_id,bh1_0.employee_id,bh1_0.bu_head_id,d1_0.departmentid,d1_0.department_name,bh1_0.first_name,bh1_0.hire_date,bh1_0.job_title,bh1_0.last_name,m1_0.employee_id,m1_0.bu_head_id,m1_0.department_id,m1_0.first_name,m1_0.hire_date,m1_0.job_title,m1_0.last_name,m1_0.manager_id,m1_0.role_id,bh1_0.role_id,d3_0.departmentid,d3_0.department_name,e1_0.first_name,e1_0.hire_date,e1_0.job_title,e1_0.last_name,m3_0.employee_id,bh4_0.employee_id,bh4_0.bu_head_id,bh4_0.department_id,bh4_0.first_name,bh4_0.hire_date,bh4_0.job_title,bh4_0.last_name,bh4_0.manager_id,bh4_0.role_id,d5_0.departmentid,d5_0.department_name,m3_0.first_name,m3_0.hire_date,m3_0.job_title,m3_0.last_name,m3_0.manager_id,m3_0.role_id,e1_0.role_id from employeemastertable e1_0 left join employeemastertable bh1_0 on bh1_0.employee_id=e1_0.bu_head_id left join departments d1_0 on d1_0.departmentid=bh1_0.department_id left join employeemastertable m1_0 on m1_0.employee_id=bh1_0.manager_id left join departments d3_0 on d3_0.departmentid=e1_0.department_id left join employeemastertable m3_0 on m3_0.employee_id=e1_0.manager_id left join employeemastertable bh4_0 on bh4_0.employee_id=m3_0.bu_head_id left join departments d5_0 on d5_0.departmentid=m3_0.department_id where e1_0.employee_id=?"
+      },
+      "thread_id": 39
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 6,
+      "parent_id": 5,
+      "thread_id": 39
+    },
+    {
+      "elapsed": 0.00096073,
+      "event": "return",
+      "id": 7,
+      "parent_id": 4,
+      "return_value": {
+        "class": "java.util.Optional",
+        "object_id": 1729084263,
+        "value": "< invalid >"
+      },
+      "thread_id": 39
+    },
+    {
+      "elapsed": 0.0012623,
+      "event": "return",
+      "id": 8,
+      "parent_id": 3,
+      "return_value": {
+        "class": "java.util.Optional",
+        "object_id": 1729084263,
+        "value": "< invalid >"
+      },
+      "thread_id": 39
+    },
+    {
+      "elapsed": 0.01499023,
+      "event": "return",
+      "id": 9,
+      "parent_id": 2,
+      "return_value": {
+        "class": "org.springframework.http.ResponseEntity",
+        "object_id": 1046283261,
+        "value": "<403 FORBIDDEN Forbidden,Only HRBPs can create or update feedback.,[]>"
+      },
+      "thread_id": 39
+    },
+    {
+      "elapsed": 0.02419452,
+      "event": "return",
+      "http_server_response": {
+        "headers": {
+          "Keep-Alive": "timeout=60",
+          "Connection": "keep-alive",
+          "Content-Length": "41",
+          "Date": "Mon, 22 Jan 2024 06:00:39 GMT",
+          "Content-Type": "text/plain;charset=UTF-8"
+        },
+        "status": 403
+      },
+      "id": 10,
+      "parent_id": 1,
+      "thread_id": 39
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "POST /api/feedback/create-update (403) - 11:30:38.958",
+    "app": "HRBP-FEEDBACK-SYSTEM",
+    "language": {
+      "name": "java",
+      "version": "17.0.9+11-LTS-201",
+      "engine": "Java HotSpot(TM) 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {}
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "findById",
+                          "type": "function",
+                          "static": false,
+                          "location": "com/hrbp/feedback/repository/EmployeeRepository.java:-1"
+                        }
+                      ],
+                      "name": "EmployeeRepository",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "repository",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "findEmployeeById",
+                          "type": "function",
+                          "static": false,
+                          "location": "com/hrbp/feedback/service/EmployeeService.java:21"
+                        }
+                      ],
+                      "name": "EmployeeService",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "service",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "createOrUpdateFeedback",
+                          "type": "function",
+                          "static": false,
+                          "location": "com/hrbp/feedback/controller/FeedbackController.java:30"
+                        }
+                      ],
+                      "name": "FeedbackController",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "controller",
+                  "type": "package"
+                }
+              ],
+              "name": "feedback",
+              "type": "package"
+            }
+          ],
+          "name": "hrbp",
+          "type": "package"
+        }
+      ],
+      "name": "com",
+      "type": "package"
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "POST /api/feedback/create-update"
+        }
+      ]
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "select e1_0.employee_id,bh1_0.employee_id,bh1_0.bu_head_id,d1_0.departmentid,d1_0.department_name,bh1_0.first_name,bh1_0.hire_date,bh1_0.job_title,bh1_0.last_name,m1_0.employee_id,m1_0.bu_head_id,m1_0.department_id,m1_0.first_name,m1_0.hire_date,m1_0.job_title,m1_0.last_name,m1_0.manager_id,m1_0.role_id,bh1_0.role_id,d3_0.departmentid,d3_0.department_name,e1_0.first_name,e1_0.hire_date,e1_0.job_title,e1_0.last_name,m3_0.employee_id,bh4_0.employee_id,bh4_0.bu_head_id,bh4_0.department_id,bh4_0.first_name,bh4_0.hire_date,bh4_0.job_title,bh4_0.last_name,bh4_0.manager_id,bh4_0.role_id,d5_0.departmentid,d5_0.department_name,m3_0.first_name,m3_0.hire_date,m3_0.job_title,m3_0.last_name,m3_0.manager_id,m3_0.role_id,e1_0.role_id from employeemastertable e1_0 left join employeemastertable bh1_0 on bh1_0.employee_id=e1_0.bu_head_id left join departments d1_0 on d1_0.departmentid=bh1_0.department_id left join employeemastertable m1_0 on m1_0.employee_id=bh1_0.manager_id left join departments d3_0 on d3_0.departmentid=e1_0.department_id left join employeemastertable m3_0 on m3_0.employee_id=e1_0.manager_id left join employeemastertable bh4_0 on bh4_0.employee_id=m3_0.bu_head_id left join departments d5_0 on d5_0.departmentid=m3_0.department_id where e1_0.employee_id=?"
+        }
+      ]
+    }
+  ]
+}

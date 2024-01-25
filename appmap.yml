@@ -1,0 +1,4 @@
+name: "HRBP-FEEDBACK-SYSTEM"
+appmap_dir: "tmp/appmap"
+packages:
+- path: "com.hrbp.feedback"
