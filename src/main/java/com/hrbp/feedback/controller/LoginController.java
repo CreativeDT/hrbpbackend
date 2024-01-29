@@ -24,6 +24,7 @@ import java.util.*;
 @Slf4j
 @RestController
 @RequestMapping("/api/login")
+@CrossOrigin("*")
 public class LoginController {
 
     ObjectMapper objectMapper = new ObjectMapper();
