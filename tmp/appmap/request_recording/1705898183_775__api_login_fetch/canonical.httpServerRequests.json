@@ -1,0 +1,7 @@
+[
+  {
+    "route": "POST /api/login/fetch",
+    "parameters": "()",
+    "status": 200
+  }
+]

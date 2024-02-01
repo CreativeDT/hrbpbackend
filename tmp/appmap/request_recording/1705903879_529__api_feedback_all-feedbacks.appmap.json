@@ -1,0 +1,97 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "headers": {
+          "postman-token": "e2899e14-4c88-4065-a89a-d356e849f56b",
+          "host": "localhost:9292",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip, deflate, br",
+          "user-agent": "PostmanRuntime/7.36.1",
+          "accept": "*/*"
+        },
+        "normalized_path_info": "/api/feedback/all-feedbacks",
+        "path_info": "/api/feedback/all-feedbacks",
+        "protocol": "HTTP/1.1",
+        "request_method": "GET"
+      },
+      "id": 1,
+      "thread_id": 34
+    },
+    {
+      "event": "call",
+      "id": 2,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select f1_0.ticket_id,f1_0.assigned_manager_id,f1_0.creator_id,f1_0.date_created,f1_0.last_status_change_date,f1_0.status,f1_0.ticket_details from feedbacktable f1_0"
+      },
+      "thread_id": 34
+    },
+    {
+      "elapsed": 0.00189984,
+      "event": "return",
+      "id": 3,
+      "parent_id": 2,
+      "thread_id": 34
+    },
+    {
+      "elapsed": 0.03702763,
+      "event": "return",
+      "http_server_response": {
+        "headers": {
+          "Transfer-Encoding": "chunked",
+          "Keep-Alive": "timeout=60",
+          "Connection": "keep-alive",
+          "Date": "Mon, 22 Jan 2024 06:11:19 GMT",
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      },
+      "id": 4,
+      "parent_id": 1,
+      "thread_id": 34
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "GET /api/feedback/all-feedbacks (200) - 11:41:19.529",
+    "app": "HRBP-FEEDBACK-SYSTEM",
+    "language": {
+      "name": "java",
+      "version": "17.0.9+11-LTS-201",
+      "engine": "Java HotSpot(TM) 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {}
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /api/feedback/all-feedbacks"
+        }
+      ]
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "select f1_0.ticket_id,f1_0.assigned_manager_id,f1_0.creator_id,f1_0.date_created,f1_0.last_status_change_date,f1_0.status,f1_0.ticket_details from feedbacktable f1_0"
+        }
+      ]
+    }
+  ]
+}

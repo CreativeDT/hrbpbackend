@@ -1,0 +1,22 @@
+[
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "GET /api/feedback/all-feedbacks"
+      }
+    ]
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "children": [
+      {
+        "type": "query",
+        "name": "select f1_0.ticket_id,f1_0.assigned_manager_id,f1_0.creator_id,f1_0.date_created,f1_0.last_status_change_date,f1_0.status,f1_0.ticket_details from feedbacktable f1_0"
+      }
+    ]
+  }
+]
