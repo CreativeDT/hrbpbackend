@@ -1,6 +1,5 @@
 package com.hrbp.feedback.repository;
 
-
 import com.hrbp.feedback.model.entity.Employee;
 import lombok.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,16 +12,12 @@ import java.util.Optional;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
+	Optional<Employee> findById(Integer employeeId);
 
-    Optional<Employee> findById(Integer employeeId);
-    @Query("FROM Employee WHERE buHead.id = :employeeId")
-    List<Employee> findEmployeesByBuHeadId(Integer employeeId);
+	@Query("FROM Employee WHERE buHead.id = :employeeId")
+	List<Employee> findEmployeesByBuHeadId(Integer employeeId);
 
-    @Query("FROM Employee WHERE manager.id = :employeeId")
-    List<Employee> findEmployeesByManagerId(Integer employeeId);
-
-
-
+	@Query("FROM Employee WHERE manager.id = :employeeId")
+	List<Employee> findEmployeesByManagerId(Integer employeeId);
 
 }
-

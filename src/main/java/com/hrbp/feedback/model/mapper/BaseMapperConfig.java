@@ -7,6 +7,6 @@ import org.mapstruct.MappingTarget;
 @MapperConfig(componentModel = "spring")
 public interface BaseMapperConfig {
 
-    @Mapping(target = "id", ignore = true)
-    void mapBaseFields(@MappingTarget Object entity, Object dto);
+	@Mapping(target = "id", ignore = true)
+	void mapBaseFields(@MappingTarget Object entity, Object dto);
 }

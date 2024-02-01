@@ -8,8 +8,7 @@ import lombok.*;
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class DepartmentDto {
-
-    private  Integer departmentId;
-    private String departmentName;
+public class DepartmentDTO {
+	private Integer departmentId;
+	private String departmentName;
 }

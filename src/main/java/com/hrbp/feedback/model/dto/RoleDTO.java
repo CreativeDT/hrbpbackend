@@ -8,7 +8,7 @@ import lombok.*;
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class RoleDto {
+public class RoleDTO {
     private  Integer roleId;
     private String roleName;
 }

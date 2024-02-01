@@ -5,6 +5,8 @@ import lombok.*;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Getter
 @Setter
@@ -25,9 +27,6 @@ public class Employee {
     @Column(name = "last_name")
     private String lastName;
 
-//    @Column(name = "job_title")
-//    private String jobTitle;
-
     @ManyToOne
     @JoinColumn(name = "role_id")
     private Role role;
@@ -44,9 +43,10 @@ public class Employee {
     @JoinColumn(name = "bu_head_id")
     private Employee buHead;
 
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @Column(name = "hire_date")
     private Date hireDate;
-
-
+    
+    
 }
 

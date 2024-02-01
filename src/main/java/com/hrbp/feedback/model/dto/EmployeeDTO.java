@@ -14,18 +14,14 @@ import java.util.List;
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class EmployeeDto {
-
+public class EmployeeDTO {
     private Integer employeeId;
     private String firstName;
     private String lastName;
-    private RoleDto role;
-    private DepartmentDto department;
+    private RoleDTO role;
+    private DepartmentDTO department;
     private Employee manager; // Full Employee object
     private Employee buHead; // Full Employee object
     private Date hireDate;
-
     private List<Feedback> feedbacks;
-
-
 }

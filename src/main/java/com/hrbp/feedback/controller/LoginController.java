@@ -1,15 +1,9 @@
 package com.hrbp.feedback.controller;
 
-/*
- * @author Shrinivas
- * @version 1.0
- * @since 2024-01-22
- */
-
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.hrbp.feedback.model.dto.EmployeeDto;
+import com.hrbp.feedback.model.dto.EmployeeDTO;
 import com.hrbp.feedback.exceptions.ResourceNotFoundException;
 import com.hrbp.feedback.service.EmployeeService;
 import jakarta.persistence.EntityManager;
@@ -21,15 +15,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
-@Slf4j
 @RestController
 @RequestMapping("/api/login")
+@Slf4j
 @CrossOrigin("*")
 public class LoginController {
 
     ObjectMapper objectMapper = new ObjectMapper();
     ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
-
 
     @Autowired
     private EmployeeService employeeService;
@@ -37,27 +30,25 @@ public class LoginController {
     @Autowired
     private EntityManager entityManager;
 
-
-    @PostMapping("/fetch")
-    public ResponseEntity<?> fetchEmployeeByNameAndRole(@RequestBody Integer employeeID) {
-        Optional<EmployeeDto> employeeDtoOptional = employeeService.findEmployeeDtoById(employeeID);
+    @GetMapping("/findemployeedetails/{employeeId}")
+    public ResponseEntity<EmployeeDTO> findemployeedetails(@PathVariable Integer employeeId) {
+    	log.info("fetchEmployeeByNameAndRole started");
+        Optional<EmployeeDTO> employeeDtoOptional = employeeService.findEmployeeDtoById(employeeId);
 
         if (employeeDtoOptional.isPresent()) {
-            EmployeeDto employeeDto = employeeDtoOptional.get();
-            Optional<List<EmployeeDto>> dashboardRecords = employeeService.getRecordsForDashboard(employeeID);
-            Map<String , Object> response = new HashMap<>();
-            response.put("employee", employeeDto);
-            response.put("dashboardRecord",dashboardRecords.orElse(Collections.emptyList()) );
+            EmployeeDTO employeeDto = employeeDtoOptional.get();
             log.info("Employee Data &  his Dashboard dats is successfully fetched");
-            return ResponseEntity.ok(response);
+            log.info("fetchEmployeeByNameAndRole completed");
+            return ResponseEntity.ok(employeeDto);
         } else {
-            throw new ResourceNotFoundException("No Employee Exists with ID : " + employeeID + " , try with existing employee!"); // Use a suitable error code
+            throw new ResourceNotFoundException("No Employee Exists with ID : " + employeeId + " , try with existing employee!"); // Use a suitable error code
         }
     }
 
 
-//    @GetMapping("/dashboard/{employeeId}")
-    public Optional<List<EmployeeDto>> getRecordsForDashboard(@PathVariable Integer employeeId) {
+    @GetMapping("/dashboardDetails")
+    public Optional<List<EmployeeDTO>> getRecordsForDashboard(@RequestParam Integer employeeId) {
+    	log.info("getRecordsForDashboard(-)started");
         return employeeService.getRecordsForDashboard(employeeId);
     }
 

@@ -4,7 +4,10 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 @Getter
@@ -15,32 +18,42 @@ import java.time.LocalDateTime;
 @Table(name = "feedback_master_table")
 public class Feedback {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ticket_id")
-    private Integer ticketId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ticket_id")
+	private Integer ticketId;
 
-    @Column(name = "creator_id")
-    private Integer creatorId; // Employee ID of the person providing feedback
+	// Employee ID of the person providing feedback
+	@Column(name = "creator_id")
+	private Integer creatorId;
 
-    @Column(name = "assigned_manager_id")
-    private Integer assignedManagerId; // Manager responsible for addressing the feedback
+	// Manager responsible for addressing the feedback
+	@Column(name = "assigned_manager_id")
+	private Integer assignedManagerId;
 
-    @Column(name = "ticket_details")
-    private String ticketDetails;
+	@Column(name = "concerns")
+	private String concerns;
 
-    @Column(name = "status")
-    private String status; // e.g., "Open", "In Progress", "Resolved"
+	@Column(name = "remarks")
+	private String remarks;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Column(name = "created_on")
-    private LocalDateTime dateCreated;
+	@Column(name = "expert")
+	private String expert;
 
+	@Column(name = "status")
+	private String status;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Column(name = "updated_on")
-    private LocalDateTime lastStatusChangeDate;
+//	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+	@Column(name = "created_on")
+	private LocalDateTime dateCreated;
 
+//	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+	@Column(name = "updated_on")
+	private LocalDateTime lastStatusChangeDate;
+	
+	@Column(name="employee_id")
+	private Integer employeeId;
 
 }
-
