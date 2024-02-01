@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/feedback")
+@RequestMapping("/api")
 @Slf4j
 @CrossOrigin("*")
 public class FeedbackController {
@@ -30,7 +30,7 @@ public class FeedbackController {
 	@Autowired
 	private EmployeeService employeeService;
 
-	@PostMapping("createfeedback")
+	@PostMapping("feedback")
 	public ResponseEntity<?> createFeedback(@RequestBody FeedbackDTO feedbackDto) {
 		int employeeId = feedbackDto.getCreatorId();
 		String userRole = getRoleFromEmployeeId(employeeId);
@@ -51,14 +51,14 @@ public class FeedbackController {
 
 	}
 
-	@PutMapping("updatefeedback")
+	@PutMapping("feedback")
 	public ResponseEntity<?> updateFeedback(@RequestBody FeedbackDTO feedbackDto) {
 		log.info("updateFeedback(-) started");
 		int employeeId = feedbackDto.getCreatorId();
 		String userRole = getRoleFromEmployeeId(employeeId);
 		log.info("userrole :" + userRole);
 		try {
-			FeedbackDTO savedFeedback = feedbackService.updateFeedback(feedbackDto,userRole);
+			FeedbackDTO savedFeedback = feedbackService.updateFeedback(feedbackDto, userRole);
 			log.info("updateFeedback(-) completed");
 			return ResponseEntity.ok(savedFeedback);
 
@@ -75,15 +75,15 @@ public class FeedbackController {
 		log.info("getAllFeedbacks(-) completed");
 		return ResponseEntity.ok(allFeedbacks);
 	}
-	
+
 	@GetMapping("/feedback/{employeeId}")
 	public ResponseEntity<List<FeedbackDTO>> getFeedbacks(@PathVariable Integer employeeId) {
-	    log.info("getFeedbacks(-) started :" + employeeId);
-	    List<FeedbackDTO> feedbacks = feedbackService.getFeedbacks(employeeId);
-	    log.info("getFeedbacks(-) completed");
-	    return ResponseEntity.ok(feedbacks);
+		log.info("getFeedbacks(-) started :" + employeeId);
+		List<FeedbackDTO> feedbacks = feedbackService.getFeedbacks(employeeId);
+		log.info("getFeedbacks(-) completed");
+		return ResponseEntity.ok(feedbacks);
 	}
-	
+
 	private String getRoleFromEmployeeId(int employeeId) {
 		Optional<EmployeeDTO> employeeDto = employeeService.findEmployeeDtoById(employeeId);
 		if (employeeDto.isEmpty()) {
@@ -91,6 +91,12 @@ public class FeedbackController {
 		}
 		RoleDTO roleDto = employeeDto.get().getRole();
 		return roleDto.getRoleName();
+	}
+
+	@GetMapping("dashboardDetails/{employeeId}")
+	public Optional<List<EmployeeDTO>> getRecordsForDashboard(@PathVariable Integer employeeId) {
+		log.info("getRecordsForDashboard(-)started");
+		return employeeService.getRecordsForDashboard(employeeId);
 	}
 
 }

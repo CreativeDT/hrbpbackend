@@ -1,12 +1,9 @@
 package com.hrbp.feedback.controller;
 
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import com.hrbp.feedback.model.dto.EmployeeDTO;
 import com.hrbp.feedback.exceptions.ResourceNotFoundException;
 import com.hrbp.feedback.service.EmployeeService;
-import jakarta.persistence.EntityManager;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,14 +18,8 @@ import java.util.*;
 @CrossOrigin("*")
 public class LoginController {
 
-    ObjectMapper objectMapper = new ObjectMapper();
-    ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
-
     @Autowired
     private EmployeeService employeeService;
-
-    @Autowired
-    private EntityManager entityManager;
 
     @GetMapping("/findemployeedetails/{employeeId}")
     public ResponseEntity<EmployeeDTO> findemployeedetails(@PathVariable Integer employeeId) {
@@ -46,16 +37,6 @@ public class LoginController {
     }
 
 
-    @GetMapping("/dashboardDetails")
-    public Optional<List<EmployeeDTO>> getRecordsForDashboard(@RequestParam Integer employeeId) {
-    	log.info("getRecordsForDashboard(-)started");
-        return employeeService.getRecordsForDashboard(employeeId);
-    }
-
-
-
-
-
-
+  
 
 }
