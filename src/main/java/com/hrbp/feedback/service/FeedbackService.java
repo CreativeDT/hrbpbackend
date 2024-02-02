@@ -1,6 +1,6 @@
 package com.hrbp.feedback.service;
 
-import com.hrbp.feedback.config.Constants;
+import com.hrbp.feedback.config.HRBPConstants;
 import com.hrbp.feedback.model.dto.FeedbackDTO;
 import com.hrbp.feedback.model.entity.Employee;
 import com.hrbp.feedback.model.entity.Feedback;
@@ -52,7 +52,7 @@ public class FeedbackService {
 		LocalDateTime now = LocalDateTime.now(); // Get current date and time
 
 		Feedback feedback = feedbackMapper.toEntity(feedbackDto);
-		if (userRole.equalsIgnoreCase(Constants.Manager) || userRole.equalsIgnoreCase(Constants.Bu_head)) {
+		if (userRole.equalsIgnoreCase(HRBPConstants.MANGER) || userRole.equalsIgnoreCase(HRBPConstants.BUHEAD)) {
 			Optional<Feedback> existingFeedback = feedbackRepository.findById(feedback.getTicketId());
 			if (existingFeedback.isPresent()) {
 				Feedback updatedFeedback = existingFeedback.get();

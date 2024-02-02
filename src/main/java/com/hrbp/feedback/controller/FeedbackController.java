@@ -30,7 +30,7 @@ public class FeedbackController {
 	@Autowired
 	private EmployeeService employeeService;
 
-	@PostMapping("feedback")
+	@PostMapping("/feedback")
 	public ResponseEntity<?> createFeedback(@RequestBody FeedbackDTO feedbackDto) {
 		int employeeId = feedbackDto.getCreatorId();
 		String userRole = getRoleFromEmployeeId(employeeId);
@@ -51,7 +51,7 @@ public class FeedbackController {
 
 	}
 
-	@PutMapping("feedback")
+	@PutMapping("/feedback")
 	public ResponseEntity<?> updateFeedback(@RequestBody FeedbackDTO feedbackDto) {
 		log.info("updateFeedback(-) started");
 		int employeeId = feedbackDto.getCreatorId();
@@ -68,7 +68,7 @@ public class FeedbackController {
 
 	}
 
-	@GetMapping("allfeedbacks")
+	@GetMapping("/feedback")
 	public ResponseEntity<List<FeedbackDTO>> getAllFeedbacks() {
 		log.info("getAllFeedbacks(-) started");
 		List<FeedbackDTO> allFeedbacks = feedbackService.getAllFeedbacks();
@@ -93,10 +93,4 @@ public class FeedbackController {
 		return roleDto.getRoleName();
 	}
 
-	@GetMapping("dashboardDetails/{employeeId}")
-	public Optional<List<EmployeeDTO>> getRecordsForDashboard(@PathVariable Integer employeeId) {
-		log.info("getRecordsForDashboard(-)started");
-		return employeeService.getRecordsForDashboard(employeeId);
 	}
-
-}

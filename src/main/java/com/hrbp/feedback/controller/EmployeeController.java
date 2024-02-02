@@ -13,23 +13,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
-@RequestMapping("/api/login")
+@RequestMapping("/api")
 @Slf4j
 @CrossOrigin("*")
-public class LoginController {
+public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
 
-    @GetMapping("/findemployeedetails/{employeeId}")
+    @GetMapping("/employeeDetails/{employeeId}")
     public ResponseEntity<EmployeeDTO> findemployeedetails(@PathVariable Integer employeeId) {
-    	log.info("fetchEmployeeByNameAndRole started");
+    	log.info("findemployeedetails started");
         Optional<EmployeeDTO> employeeDtoOptional = employeeService.findEmployeeDtoById(employeeId);
 
         if (employeeDtoOptional.isPresent()) {
             EmployeeDTO employeeDto = employeeDtoOptional.get();
             log.info("Employee Data &  his Dashboard dats is successfully fetched");
-            log.info("fetchEmployeeByNameAndRole completed");
+            log.info("findemployeedetails completed");
             return ResponseEntity.ok(employeeDto);
         } else {
             throw new ResourceNotFoundException("No Employee Exists with ID : " + employeeId + " , try with existing employee!"); // Use a suitable error code
@@ -37,6 +37,11 @@ public class LoginController {
     }
 
 
-  
+    @GetMapping("/dashboardDetails/{employeeId}")
+	public Optional<List<EmployeeDTO>> getRecordsForDashboard(@PathVariable Integer employeeId) {
+		log.info("getRecordsForDashboard(-)started");
+		return employeeService.getRecordsForDashboard(employeeId);
+	}
+
 
 }

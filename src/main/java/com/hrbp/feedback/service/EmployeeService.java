@@ -2,7 +2,7 @@ package com.hrbp.feedback.service;
 
 import com.hrbp.feedback.model.dto.EmployeeDTO;
 import com.hrbp.feedback.model.entity.Employee;
-import com.hrbp.feedback.config.Constants;
+import com.hrbp.feedback.config.HRBPConstants;
 import com.hrbp.feedback.exceptions.ResourceNotFoundException;
 import com.hrbp.feedback.model.mapper.EmployeeMapper;
 import com.hrbp.feedback.model.mapper.FeedbackMapper;
@@ -45,18 +45,18 @@ public class EmployeeService {
 		if (employee.isPresent()) {
 			String roleName = employee.get().getRole().getRoleName();
 			return switch (roleName) {
-			case Constants.Bu_head: // Combine cases for similar logic
+			case HRBPConstants.BUHEAD: // Combine cases for similar logic
 				yield Optional.of(employeeRepository.findEmployeesByBuHeadId(employeeId) // Wrap in Optional.of
 						.stream().map(employeeMapper::toDto).peek(employeeDto -> {
-							if (employeeDto.getRole().getRoleName().equals(Constants.HRBP)
-									|| employeeDto.getRole().getRoleName().equals(Constants.Manager)) {
+							if (employeeDto.getRole().getRoleName().equals(HRBPConstants.HRBP)
+									|| employeeDto.getRole().getRoleName().equals(HRBPConstants.MANGER)) {
 								fetchFeedbacksIfHrbp(employeeDto);
 							}
 						}).toList());
-			case Constants.Manager:
+			case HRBPConstants.MANGER:
 				yield Optional.of(employeeRepository.findEmployeesByManagerId(employeeId).stream()
 						.map(employeeMapper::toDto).peek(this::fetchFeedbacksIfHrbp).toList());
-			case Constants.HRBP:
+			case HRBPConstants.HRBP:
 				EmployeeDTO employeeDto = employeeMapper.toDto(employee.orElseThrow());
 				employeeDto.setFeedbacks(feedbackRepository.findByCreatorId(employeeId));
 				yield Optional.of(List.of(employeeDto)); // Already wrapped in Optional.of
@@ -70,8 +70,8 @@ public class EmployeeService {
 	}
 
 	private void fetchFeedbacksIfHrbp(EmployeeDTO employeeDto) {
-		if (employeeDto.getRole().getRoleName().equals(Constants.HRBP)
-				|| employeeDto.getRole().getRoleName().equals(Constants.Manager)) {
+		if (employeeDto.getRole().getRoleName().equals(HRBPConstants.HRBP)
+				|| employeeDto.getRole().getRoleName().equals(HRBPConstants.MANGER)) {
 			employeeDto.setFeedbacks(feedbackRepository.findByCreatorId(employeeDto.getEmployeeId()));
 		}
 	}
