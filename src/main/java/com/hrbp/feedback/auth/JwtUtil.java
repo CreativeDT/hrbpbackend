@@ -19,8 +19,7 @@ public class JwtUtil {
 
 
     private final String secret_key = "5367566B59703373367639792F423F4528482B4D6251655468576D5A71347437";
-    private long accessTokenValidity = 86400000;
-
+    Date accessTokenValidity = new Date(System.currentTimeMillis() + 3600000);
     private final JwtParser jwtParser;
     private final String TOKEN_HEADER = "Authorization";
     private final String TOKEN_PREFIX = "Bearer ";
@@ -31,11 +30,9 @@ public class JwtUtil {
 
     public String createToken(User user) {
         Claims claims = Jwts.claims().setSubject(user.getUserId().toString());
-        Date tokenCreateTime = new Date();
-        Date tokenValidity = new Date(tokenCreateTime.getTime() + TimeUnit.MINUTES.toMillis(accessTokenValidity));
         return Jwts.builder()
                 .setClaims(claims)
-                .setExpiration(tokenValidity)
+                .setExpiration(accessTokenValidity)
                 .signWith(SignatureAlgorithm.HS256, secret_key)
                 .compact();
     }
@@ -81,10 +78,6 @@ public class JwtUtil {
 
     public String getEmail(Claims claims) {
         return claims.getSubject();
-    }
-
-    private List<String> getRoles(Claims claims) {
-        return (List<String>) claims.get("roles");
     }
 
 

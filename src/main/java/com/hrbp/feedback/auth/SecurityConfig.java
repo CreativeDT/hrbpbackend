@@ -46,11 +46,12 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-		http.csrf().disable().authorizeRequests().requestMatchers("/auth/**").permitAll().requestMatchers("/api/**")
-				.authenticated()
-//                .anyRequest().authenticated()
-				.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-				.addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
+		http.csrf().disable()
+					.authorizeRequests()
+					.requestMatchers("/auth/**").permitAll()
+					.requestMatchers("/api/**").authenticated()
+					.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+					.addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
 
 		return http.build();
 	}

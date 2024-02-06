@@ -1,9 +1,10 @@
 package com.hrbp.feedback.service;
 
 import com.hrbp.feedback.model.dto.EmployeeDTO;
+import com.hrbp.feedback.model.dto.RoleDTO;
 import com.hrbp.feedback.model.entity.Employee;
 import com.hrbp.feedback.config.HRBPConstants;
-import com.hrbp.feedback.exceptions.ResourceNotFoundException;
+import com.hrbp.feedback.exceptions.EmployeeNotFoundException;
 import com.hrbp.feedback.model.mapper.EmployeeMapper;
 import com.hrbp.feedback.model.mapper.FeedbackMapper;
 import com.hrbp.feedback.repository.EmployeeRepository;
@@ -31,8 +32,6 @@ public class EmployeeService {
 
 	@Autowired
 	private FeedbackMapper feedbackMapper;
-	
-	
 
 	public Optional<EmployeeDTO> findEmployeeDtoById(Integer employeeId) {
 		Optional<Employee> employee = employeeRepository.findById(employeeId);
@@ -64,7 +63,7 @@ public class EmployeeService {
 				throw new IllegalArgumentException("Invalid role: " + roleName);
 			};
 		} else {
-			throw new ResourceNotFoundException(
+			throw new EmployeeNotFoundException(
 					"No Employee Exists with ID : " + employeeId + " , try with existing employee!");
 		}
 	}
@@ -76,6 +75,4 @@ public class EmployeeService {
 		}
 	}
 
-	
-	
 }

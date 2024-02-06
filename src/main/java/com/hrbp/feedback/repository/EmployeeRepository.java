@@ -1,7 +1,6 @@
 package com.hrbp.feedback.repository;
 
 import com.hrbp.feedback.model.entity.Employee;
-import lombok.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

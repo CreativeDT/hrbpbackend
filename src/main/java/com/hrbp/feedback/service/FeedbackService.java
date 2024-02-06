@@ -29,7 +29,7 @@ public class FeedbackService {
 	private FeedbackMapper feedbackMapper;
 
 	public FeedbackDTO createFeedback(FeedbackDTO feedbackDto) {
-		log.info("createFeedback(-) started");
+		log.info("createFeedback(-) started Ticket ID is :"+feedbackDto.getTicketId());
 		LocalDateTime now = LocalDateTime.now(); // Get current date and time
 		Employee manager = employeeRepository.findById(feedbackDto.getCreatorId())
 				.orElseThrow(() -> new RuntimeException("Employee not found")).getManager();
@@ -38,7 +38,8 @@ public class FeedbackService {
 		Feedback feedback = feedbackMapper.toEntity(feedbackDto);
 		if (feedback.getTicketId() == null || feedback.getTicketId() == 0) {
 			feedback.setDateCreated(now);
-		feedback.setAssignedManagerId(managerId);
+			feedback.setAssignedManagerId(managerId);
+			feedback.setTicketId(feedbackDto.getTicketId());
 			feedbackMapper.toDto(feedbackRepository.save(feedback));
 		}
 
@@ -75,14 +76,11 @@ public class FeedbackService {
 		List<Feedback> feedbackList = feedbackRepository.findAll();
 		return feedbackMapper.toDTOList(feedbackList);
 	}
-	
-	 public List<FeedbackDTO> getFeedbacks(Integer employeeId) {
-		 log.info("getFeedback(-) started");
-		 List<Feedback> feedbacks = feedbackRepository.findByEmployeeId(employeeId);
-	        return feedbackMapper.toDTOList(feedbacks);
-	    }
 
+	public List<FeedbackDTO> getFeedbacks(Integer employeeId) {
+		log.info("getFeedback(-) started");
+		List<Feedback> feedbacks = feedbackRepository.findByEmployeeId(employeeId);
+		return feedbackMapper.toDTOList(feedbacks);
+	}
 
-
-	
 }

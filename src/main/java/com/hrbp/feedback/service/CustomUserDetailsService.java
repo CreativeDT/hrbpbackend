@@ -11,27 +11,26 @@ import java.util.List;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
+
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
-    private final UserRepository userRepository;
+	private final UserRepository userRepository;
 
-    public CustomUserDetailsService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+	public CustomUserDetailsService(UserRepository userRepository) {
+		this.userRepository = userRepository;
+	}
 
-    @Override
-    public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
-        User user = userRepository.findByUserId(Integer.parseInt(userId));
-        List<String> roles = new ArrayList<>();
-        roles.add("USER");
-        UserDetails userDetails =
-                org.springframework.security.core.userdetails.User.builder()
-                        .username(user.getUserId().toString())
-                        .password(user.getPasword())
-                        .roles(roles.toArray(new String[0]))
-                        .build();
-        return userDetails;
-    }
+	@Override
+	public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
+	    User user = userRepository.findByUserId(Integer.parseInt(userId));
+	    List<String> roles = new ArrayList<>();
+	    roles.add("USER");
+	    return org.springframework.security.core.userdetails.User.builder()
+	            .username(user.getUserId().toString())
+	            .password(user.getPasword())
+	            .roles(roles.toArray(new String[0]))
+	            .build();
+	}
+
 }

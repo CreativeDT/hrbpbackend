@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import com.hrbp.feedback.auth.JwtUtil;
+import com.hrbp.feedback.model.dto.ApiResponse;
 import com.hrbp.feedback.model.dto.ErrorRes;
 import com.hrbp.feedback.model.dto.LoginReq;
 import com.hrbp.feedback.model.dto.LoginRes;
@@ -32,27 +33,27 @@ public class AuthController {
         this.jwtUtil = jwtUtil;
 
     }
-
     @PostMapping("/generatetoken")
-    public ResponseEntity login(@RequestBody LoginReq loginReq)  {
-    	log.info("generatetoken(-) started");
+    public ResponseEntity<ApiResponse<LoginRes>> login(@RequestBody LoginReq loginReq) {
+        log.info("generatetoken(-) started");
 
         try {
-            Authentication authentication =
-                    authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginReq.getUserId(), loginReq.getPassword()));
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(loginReq.getUserId(), loginReq.getPassword()));
             Integer userId = Integer.parseInt(authentication.getName());
-            User user = new User(userId,"");
+            User user = new User(userId, "");
             String token = jwtUtil.createToken(user);
-            LoginRes loginRes = new LoginRes(userId,token);
-        	log.info("generatetoken(-) completed");
-            return ResponseEntity.ok(loginRes);
+            LoginRes loginRes = new LoginRes(userId, token);
+            log.info("generatetoken(-) completed");
 
-        }catch (BadCredentialsException e){
-            ErrorRes errorResponse = new ErrorRes(HttpStatus.BAD_REQUEST,"Invalid username or password");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
-        }catch (Exception e){
-            ErrorRes errorResponse = new ErrorRes(HttpStatus.BAD_REQUEST, e.getMessage());
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+            return ResponseEntity.ok(new ApiResponse<>(true, loginRes, null));
+        } catch (BadCredentialsException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body(new ApiResponse<>(false, null, "Invalid username or password"));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body(new ApiResponse<>(false, null, e.getMessage()));
         }
     }
+
 }
