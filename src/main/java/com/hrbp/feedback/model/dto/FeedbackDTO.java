@@ -2,7 +2,7 @@ package com.hrbp.feedback.model.dto;
 
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Getter
@@ -18,7 +18,8 @@ public class FeedbackDTO {
 	private String remarks;
 	private String expert;
 	private String status;
-	private LocalDateTime dateCreated;
-	private LocalDateTime lastStatusChangeDate;
+	private String createdDate;
+	private String updatedDate;
 	private Integer employeeId;
+	private List<ActionItemDto> actionItems;
 }

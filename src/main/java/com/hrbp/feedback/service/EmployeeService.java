@@ -68,7 +68,7 @@ public class EmployeeService {
 		}
 	}
 
-	private void fetchFeedbacksIfHrbp(EmployeeDTO employeeDto) {
+	public void fetchFeedbacksIfHrbp(EmployeeDTO employeeDto) {
 		if (employeeDto.getRole().getRoleName().equals(HRBPConstants.HRBP)
 				|| employeeDto.getRole().getRoleName().equals(HRBPConstants.MANGER)) {
 			employeeDto.setFeedbacks(feedbackRepository.findByCreatorId(employeeDto.getEmployeeId()));

@@ -25,7 +25,6 @@ public class EmployeeController {
 	@GetMapping("/employeeDetails/{employeeId}")
 	public ResponseEntity<EmployeeReponse> findEmployeeDetails(@PathVariable Integer employeeId) {
 		log.info("findEmployeeDetails started");
-
 		Optional<EmployeeDTO> employeeDtoOptional = employeeService.findEmployeeDtoById(employeeId);
 
 		if (employeeDtoOptional.isPresent()) {

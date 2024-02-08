@@ -14,6 +14,6 @@ import lombok.Setter;
 public class FeedbackResponse {
 
 	private FeedbackDTO feedbackDTO;
-	private FeedbackError fedError;
+	private FeedbackError feedbackerror;
 	
 }

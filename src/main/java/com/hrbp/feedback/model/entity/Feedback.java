@@ -5,6 +5,9 @@ import lombok.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
 
 @Entity
 @Getter
@@ -12,6 +15,7 @@ import java.time.LocalDateTime;
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
+@Component
 @Table(name = "feedback_master_table")
 public class Feedback {
 
@@ -40,17 +44,18 @@ public class Feedback {
 	@Column(name = "status")
 	private String status;
 
-//	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
-	@Column(name = "created_on")
-	private LocalDateTime dateCreated;
 
-//	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+	@Column(name = "created_on")
+	private String createdDate;
+
+
 	@Column(name = "updated_on")
-	private LocalDateTime lastStatusChangeDate;
-	
-	@Column(name="employee_id")
+	private String updatedDate;
+
+	@Column(name = "employee_id")
 	private Integer employeeId;
+
+	@OneToMany(mappedBy = "feedback", cascade = CascadeType.ALL)
+	private List<ActionItem> actionItems;
 
 }

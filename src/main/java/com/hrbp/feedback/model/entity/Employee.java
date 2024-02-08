@@ -43,7 +43,7 @@ public class Employee {
     @JoinColumn(name = "bu_head_id")
     private Employee buHead;
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     @Column(name = "hire_date")
     private Date hireDate;
     

@@ -5,8 +5,6 @@ public class ApiResponse<T> {
     private T data;
     private String errorMessage;
 
-    // Constructors, getters, and setters
-
     public ApiResponse(boolean success, T data, String errorMessage) {
         this.success = success;
         this.data = data;
