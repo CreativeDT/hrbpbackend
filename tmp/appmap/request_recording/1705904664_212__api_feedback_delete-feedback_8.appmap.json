@@ -1,0 +1,232 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "http_server_request": {
+        "headers": {
+          "postman-token": "6877bc6b-dc35-4aee-b74e-da9a38a5055b",
+          "host": "localhost:9292",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip, deflate, br",
+          "user-agent": "PostmanRuntime/7.36.1",
+          "accept": "*/*"
+        },
+        "normalized_path_info": "/api/feedback/delete-feedback/{id}",
+        "path_info": "/api/feedback/delete-feedback/8",
+        "protocol": "HTTP/1.1",
+        "request_method": "DELETE"
+      },
+      "id": 1,
+      "thread_id": 34
+    },
+    {
+      "defined_class": "com.hrbp.feedback.controller.FeedbackController",
+      "event": "call",
+      "id": 2,
+      "lineno": 58,
+      "method_id": "deleteFeedback",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "id",
+          "object_id": 72228971,
+          "value": "8"
+        }
+      ],
+      "path": "com/hrbp/feedback/controller/FeedbackController.java",
+      "receiver": {
+        "class": "com.hrbp.feedback.controller.FeedbackController",
+        "object_id": 490582523,
+        "value": "com.hrbp.feedback.controller.FeedbackController@1d3db1fb"
+      },
+      "static": false,
+      "thread_id": 34
+    },
+    {
+      "defined_class": "com.hrbp.feedback.service.FeedbackService",
+      "event": "call",
+      "id": 3,
+      "lineno": 46,
+      "method_id": "deleteFeedbackById",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "feedbackId",
+          "object_id": 72228971,
+          "value": "8"
+        }
+      ],
+      "path": "com/hrbp/feedback/service/FeedbackService.java",
+      "receiver": {
+        "class": "com.hrbp.feedback.service.FeedbackService",
+        "object_id": 1989369062,
+        "value": "com.hrbp.feedback.service.FeedbackService@76935ce6"
+      },
+      "static": false,
+      "thread_id": 34
+    },
+    {
+      "event": "call",
+      "id": 4,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select f1_0.ticket_id,f1_0.assigned_manager_id,f1_0.creator_id,f1_0.date_created,f1_0.last_status_change_date,f1_0.status,f1_0.ticket_details from feedbacktable f1_0 where f1_0.ticket_id=?"
+      },
+      "thread_id": 34
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 5,
+      "parent_id": 4,
+      "thread_id": 34
+    },
+    {
+      "event": "call",
+      "id": 6,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "delete from feedbacktable where ticket_id=?"
+      },
+      "thread_id": 34
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 7,
+      "parent_id": 6,
+      "thread_id": 34
+    },
+    {
+      "elapsed": 0.03986395,
+      "event": "return",
+      "id": 8,
+      "parent_id": 3,
+      "thread_id": 34
+    },
+    {
+      "elapsed": 0.06810506,
+      "event": "return",
+      "id": 9,
+      "parent_id": 2,
+      "return_value": {
+        "class": "org.springframework.http.ResponseEntity",
+        "object_id": 524241575,
+        "value": "<204 NO_CONTENT No Content,[]>"
+      },
+      "thread_id": 34
+    },
+    {
+      "elapsed": 0.08416243,
+      "event": "return",
+      "http_server_response": {
+        "headers": {},
+        "status": 204
+      },
+      "id": 10,
+      "parent_id": 1,
+      "thread_id": 34
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "DELETE /api/feedback/delete-feedback/8 (204) - 11:54:24.212",
+    "app": "HRBP-FEEDBACK-SYSTEM",
+    "language": {
+      "name": "java",
+      "version": "17.0.9+11-LTS-201",
+      "engine": "Java HotSpot(TM) 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {}
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "deleteFeedbackById",
+                          "type": "function",
+                          "static": false,
+                          "location": "com/hrbp/feedback/service/FeedbackService.java:46"
+                        }
+                      ],
+                      "name": "FeedbackService",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "service",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "deleteFeedback",
+                          "type": "function",
+                          "static": false,
+                          "location": "com/hrbp/feedback/controller/FeedbackController.java:58"
+                        }
+                      ],
+                      "name": "FeedbackController",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "controller",
+                  "type": "package"
+                }
+              ],
+              "name": "feedback",
+              "type": "package"
+            }
+          ],
+          "name": "hrbp",
+          "type": "package"
+        }
+      ],
+      "name": "com",
+      "type": "package"
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "DELETE /api/feedback/delete-feedback/{id}"
+        }
+      ]
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "select f1_0.ticket_id,f1_0.assigned_manager_id,f1_0.creator_id,f1_0.date_created,f1_0.last_status_change_date,f1_0.status,f1_0.ticket_details from feedbacktable f1_0 where f1_0.ticket_id=?"
+        },
+        {
+          "type": "query",
+          "name": "delete from feedbacktable where ticket_id=?"
+        }
+      ]
+    }
+  ]
+}

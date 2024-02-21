@@ -1,0 +1,4 @@
+[
+  "com/hrbp/feedback/controller/FeedbackController",
+  "com/hrbp/feedback/service/FeedbackService"
+]

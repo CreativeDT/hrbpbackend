@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /api/feedback/all-feedbacks",
+    "parameters": "()",
+    "status": 200
+  }
+]
