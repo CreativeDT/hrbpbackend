@@ -1,16 +1,24 @@
 package com.hrbp.feedback.service;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+
+import javax.management.relation.Role;
+
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hrbp.feedback.config.HRBPConstants;
 import com.hrbp.feedback.model.dto.EmployeeDTO;
 import com.hrbp.feedback.model.dto.RoleDTO;
 import com.hrbp.feedback.model.entity.Employee;
@@ -61,7 +69,7 @@ class EmployeeServiceTest {
 	void testFetchFeedbacksIfHrbp() {
 		// Mock data
 		EmployeeDTO mockEmployeeDTO = new EmployeeDTO();
-		mockEmployeeDTO.setRole(new RoleDTO(100, "HRBP")); 
+		mockEmployeeDTO.setRole(new RoleDTO(100, "HRBP"));
 		Feedback mockFeedback1 = new Feedback();
 		mockFeedback1.setEmployeeId(1);
 		mockFeedback1.setCreatorId(mockEmployeeDTO.getEmployeeId());
@@ -77,4 +85,146 @@ class EmployeeServiceTest {
 		verify(feedbackRepository, times(1)).findByCreatorId(mockEmployeeDTO.getEmployeeId());
 	}
 
+	@Test
+	public void testFindEmployeeDtoById_ExistingEmployee() {
+		// Arrange
+		Integer employeeId = 1;
+		Employee mockEmployee = new Employee();
+		mockEmployee.setEmployeeId(employeeId);
+		mockEmployee.setFirstName("Test");
+		mockEmployee.setLastName("TestLast");
+		EmployeeDTO mockEmployeeDto = new EmployeeDTO();
+		mockEmployeeDto.setEmployeeId(employeeId);
+		mockEmployeeDto.setFirstName("Test");
+		mockEmployeeDto.setLastName("TestLast");
+
+		when(employeeRepository.findById(eq(employeeId))).thenReturn(Optional.of(mockEmployee));
+		when(employeeMapper.toDto(eq(mockEmployee))).thenReturn(mockEmployeeDto);
+
+		// Act
+		Optional<EmployeeDTO> result = employeeService.findEmployeeDtoById(employeeId);
+
+		// Assert
+		assertTrue(result.isPresent());
+		assertEquals(mockEmployeeDto, result.get());
+	}
+
+	@Test
+	public void testGetRecordsForDashboard_BuHeadRole() {
+		// Arrange
+		Integer employeeId = 1;
+
+		// Mock Employee
+		Employee mockEmployee = mock(Employee.class);
+		mockEmployee.setEmployeeId(employeeId);
+		mockEmployee.setFirstName("Test");
+		mockEmployee.setLastName("TestLast");
+
+		// Mock Role
+		Role mockRole = mock(Role.class);
+//		when(mockEmployee.getRole()).thenReturn(mockRole);
+		when(mockRole.getRoleName()).thenReturn(HRBPConstants.BUHEAD);
+
+		// Mock EmployeeRepository
+		when(employeeRepository.findById(eq(employeeId))).thenReturn(Optional.of(mockEmployee));
+		when(employeeRepository.findEmployeesByBuHeadId(eq(employeeId)))
+				.thenReturn(List.of(new Employee(/* Set necessary fields */)));
+
+		// Mock EmployeeMapper
+		EmployeeDTO mockEmployeeDto = new EmployeeDTO();
+		mockEmployeeDto.setEmployeeId(employeeId);
+		mockEmployeeDto.setFirstName("Test");
+		mockEmployeeDto.setLastName("TestLast");
+
+		when(employeeMapper.toDto(any())).thenReturn(mockEmployeeDto);
+
+		// Act
+//		Optional<List<EmployeeDTO>> result = employeeService.getRecordsForDashboard(employeeId);
+
+		// Assert
+//		assertTrue(result.isPresent());
+		// Add more assertions based on the expected behavior for BUHEAD role
+	}
+
+	
+	  @Test
+	    public void testGetRecordsForDashboard_ManagerRole() {
+	        // Similar to the BUHeadRole test, but for Manager role
+
+			// Arrange
+			Integer employeeId = 1;
+
+			// Mock Employee
+			Employee mockEmployee = mock(Employee.class);
+			mockEmployee.setEmployeeId(employeeId);
+			mockEmployee.setFirstName("Test");
+			mockEmployee.setLastName("TestLast");
+
+			// Mock Role
+			Role mockRole = mock(Role.class);
+//			when(mockEmployee.getRole()).thenReturn(mockRole);
+			when(mockRole.getRoleName()).thenReturn(HRBPConstants.MANGER);
+
+			// Mock EmployeeRepository
+			when(employeeRepository.findById(eq(employeeId))).thenReturn(Optional.of(mockEmployee));
+			when(employeeRepository.findEmployeesByBuHeadId(eq(employeeId)))
+					.thenReturn(List.of(new Employee(/* Set necessary fields */)));
+
+			// Mock EmployeeMapper
+			EmployeeDTO mockEmployeeDto = new EmployeeDTO();
+			mockEmployeeDto.setEmployeeId(employeeId);
+			mockEmployeeDto.setFirstName("Test");
+			mockEmployeeDto.setLastName("TestLast");
+
+			when(employeeMapper.toDto(any())).thenReturn(mockEmployeeDto);
+
+			// Act
+//			Optional<List<EmployeeDTO>> result = employeeService.getRecordsForDashboard(employeeId);
+
+			// Assert
+//			assertTrue(result.isPresent());
+			// Add more assertions based on the expected behavior for BUHEAD role
+		
+	    }
+
+	    @Test
+	    public void testGetRecordsForDashboard_HRBP() {
+	        // Similar to the BUHeadRole test, but for HRBP role
+
+			// Arrange
+			Integer employeeId = 1;
+
+			// Mock Employee
+			Employee mockEmployee = mock(Employee.class);
+			mockEmployee.setEmployeeId(employeeId);
+			mockEmployee.setFirstName("Test");
+			mockEmployee.setLastName("TestLast");
+
+			// Mock Role
+			Role mockRole = mock(Role.class);
+//			when(mockEmployee.getRole()).thenReturn(mockRole);
+			when(mockRole.getRoleName()).thenReturn(HRBPConstants.HRBP);
+
+			// Mock EmployeeRepository
+			when(employeeRepository.findById(eq(employeeId))).thenReturn(Optional.of(mockEmployee));
+			when(employeeRepository.findEmployeesByBuHeadId(eq(employeeId)))
+					.thenReturn(List.of(new Employee(/* Set necessary fields */)));
+
+			// Mock EmployeeMapper
+			EmployeeDTO mockEmployeeDto = new EmployeeDTO();
+			mockEmployeeDto.setEmployeeId(employeeId);
+			mockEmployeeDto.setFirstName("Test");
+			mockEmployeeDto.setLastName("TestLast");
+
+			when(employeeMapper.toDto(any())).thenReturn(mockEmployeeDto);
+
+			// Act
+//			Optional<List<EmployeeDTO>> result = employeeService.getRecordsForDashboard(employeeId);
+
+			// Assert
+//			assertTrue(result.isPresent());
+			// Add more assertions based on the expected behavior for BUHEAD role
+		
+	    }
+	    
 }

@@ -140,7 +140,7 @@ public class FeedbackService {
 		return feedbackMapper.toDTOList(feedbacks);
 	}
 
-	private String dateTimeFormat() {
+	public String dateTimeFormat() {
 		log.info("dateTimeFormat(-)");
 		LocalDateTime now = LocalDateTime.now();
 		// Define a formatter for "yyyy-MM-dd HH:mm"

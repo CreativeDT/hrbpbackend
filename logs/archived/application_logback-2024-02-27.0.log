@@ -1,0 +1,630 @@
+2024-02-27 10:16:10 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 10:16:11 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 10:16:11 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 10:16:12 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 22020 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 10:16:12 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 10:16:13 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 10:16:13 [main] INFO  : Finished Spring Data repository scanning in 96 ms. Found 4 JPA repository interfaces.
+2024-02-27 10:16:14 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 10:16:14 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 10:16:14 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 10:16:14 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 10:16:14 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 10:16:15 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c368165
+2024-02-27 10:16:15 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 10:16:17 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 10:16:17 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 10:16:17 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 10:16:17 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 10:16:18 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d9bc433, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a13e0fa, org.springframework.security.web.context.SecurityContextHolderFilter@25cf63c6, org.springframework.security.web.header.HeaderWriterFilter@4e2da6e0, org.springframework.web.filter.CorsFilter@5476bbbd, org.springframework.security.web.authentication.logout.LogoutFilter@25a31013, com.hrbp.feedback.auth.JwtAuthorizationFilter@2adf9c46, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a823633, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3779df1c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73fd16dc, org.springframework.security.web.session.SessionManagementFilter@745d33a, org.springframework.security.web.access.ExceptionTranslationFilter@5e4a40d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c8b9022]
+2024-02-27 10:16:19 [main] INFO  : Started FeedbackServiceTest in 7.813 seconds (process running for 10.308)
+2024-02-27 10:16:20 [main] INFO  : getFeedback(-) started
+2024-02-27 10:16:21 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 10:16:21 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 10:16:21 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 12:55:44 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 12:55:44 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 12:55:44 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 12:55:45 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 7236 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 12:55:45 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 12:55:46 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 12:55:46 [main] INFO  : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2024-02-27 12:55:46 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 12:55:47 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 12:55:47 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 12:55:47 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 12:55:47 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 12:55:48 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@307f6602
+2024-02-27 12:55:48 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 12:55:49 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 12:55:49 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 12:55:50 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 12:55:50 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 12:55:51 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@af82513, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7338e730, org.springframework.security.web.context.SecurityContextHolderFilter@6f3f1cb9, org.springframework.security.web.header.HeaderWriterFilter@7d9bfacb, org.springframework.web.filter.CorsFilter@4e3bbb12, org.springframework.security.web.authentication.logout.LogoutFilter@5af3223b, com.hrbp.feedback.auth.JwtAuthorizationFilter@485b4ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@667e412a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8fbae48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5790f77e, org.springframework.security.web.session.SessionManagementFilter@251e231, org.springframework.security.web.access.ExceptionTranslationFilter@71bc94fa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ccc9797]
+2024-02-27 12:55:51 [main] INFO  : Started FeedbackServiceTest in 6.975 seconds (process running for 9.522)
+2024-02-27 12:55:52 [main] INFO  : getFeedback(-) started
+2024-02-27 12:55:52 [main] INFO  : dateTimeFormat(-)
+2024-02-27 12:55:54 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 12:55:54 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 12:55:54 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 15:49:04 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.controller.EmployeeControllerTest]: EmployeeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 15:49:04 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.controller.EmployeeControllerTest
+2024-02-27 15:49:04 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 15:49:04 [main] INFO  : Starting EmployeeControllerTest using Java 17.0.5 with PID 23124 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 15:49:04 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 15:49:05 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 15:49:05 [main] INFO  : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2024-02-27 15:49:06 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 15:49:06 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 15:49:06 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 15:49:06 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 15:49:06 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 15:49:06 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3caa4d85
+2024-02-27 15:49:06 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 15:49:07 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 15:49:07 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 15:49:08 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 15:49:08 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 15:49:08 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@527b989a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c3f47ba, org.springframework.security.web.context.SecurityContextHolderFilter@7c2d4398, org.springframework.security.web.header.HeaderWriterFilter@12e8c5c4, org.springframework.web.filter.CorsFilter@ca9ffc0, org.springframework.security.web.authentication.logout.LogoutFilter@3470c771, com.hrbp.feedback.auth.JwtAuthorizationFilter@67167f8f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7280785f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@589dd717, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e316971, org.springframework.security.web.session.SessionManagementFilter@160b7ccd, org.springframework.security.web.access.ExceptionTranslationFilter@2a12048d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66fd9613]
+2024-02-27 15:49:09 [main] INFO  : Started EmployeeControllerTest in 4.559 seconds (process running for 5.849)
+2024-02-27 15:49:09 [main] INFO  : Initializing Spring TestDispatcherServlet ''
+2024-02-27 15:49:09 [main] INFO  : Initializing Servlet ''
+2024-02-27 15:49:09 [main] INFO  : Completed initialization in 0 ms
+2024-02-27 15:49:09 [main] WARN  : No mapping for GET /employeeDetails/1
+2024-02-27 15:49:09 [main] WARN  : No endpoint GET /employeeDetails/1.
+2024-02-27 15:49:09 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 15:49:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 15:49:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 15:57:13 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.EmployeeServiceTest]: EmployeeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 15:57:13 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.EmployeeServiceTest
+2024-02-27 15:57:13 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 15:57:13 [main] INFO  : Starting EmployeeServiceTest using Java 17.0.5 with PID 18412 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 15:57:13 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 15:57:14 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 15:57:14 [main] INFO  : Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
+2024-02-27 15:57:15 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 15:57:15 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 15:57:15 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 15:57:15 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 15:57:15 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 15:57:15 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@343d1d25
+2024-02-27 15:57:15 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 15:57:17 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 15:57:17 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 15:57:17 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 15:57:17 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 15:57:18 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6230a15a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7225f871, org.springframework.security.web.context.SecurityContextHolderFilter@70c3483b, org.springframework.security.web.header.HeaderWriterFilter@47858d7c, org.springframework.web.filter.CorsFilter@1bff4cb9, org.springframework.security.web.authentication.logout.LogoutFilter@7785430c, com.hrbp.feedback.auth.JwtAuthorizationFilter@63a9af28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ccc07ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ab5e63, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c521a79, org.springframework.security.web.session.SessionManagementFilter@63f6811e, org.springframework.security.web.access.ExceptionTranslationFilter@7197b96c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ca9ffc0]
+2024-02-27 15:57:18 [main] INFO  : Started EmployeeServiceTest in 5.486 seconds (process running for 6.806)
+2024-02-27 15:57:19 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 15:57:19 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 15:57:19 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:04:37 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.EmployeeServiceTest]: EmployeeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:04:37 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.EmployeeServiceTest
+2024-02-27 16:04:37 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:04:37 [main] INFO  : Starting EmployeeServiceTest using Java 17.0.5 with PID 22608 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:04:37 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:04:38 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:04:38 [main] INFO  : Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:04:39 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:04:39 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:04:39 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:04:39 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:04:39 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:04:39 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@762da62b
+2024-02-27 16:04:39 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:04:40 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:04:40 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:04:41 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:04:41 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:04:42 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7225f871, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bff4cb9, org.springframework.security.web.context.SecurityContextHolderFilter@276ac94c, org.springframework.security.web.header.HeaderWriterFilter@5a5cd0af, org.springframework.web.filter.CorsFilter@c521a79, org.springframework.security.web.authentication.logout.LogoutFilter@13056efe, com.hrbp.feedback.auth.JwtAuthorizationFilter@105cdf61, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ab5e63, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a434cdd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b0f50d8, org.springframework.security.web.session.SessionManagementFilter@5565d718, org.springframework.security.web.access.ExceptionTranslationFilter@105e9fef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e316971]
+2024-02-27 16:04:42 [main] INFO  : Started EmployeeServiceTest in 5.116 seconds (process running for 6.428)
+2024-02-27 16:04:43 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:04:43 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:04:43 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:10:39 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.EmployeeServiceTest]: EmployeeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:10:39 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.EmployeeServiceTest
+2024-02-27 16:10:39 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:10:40 [main] INFO  : Starting EmployeeServiceTest using Java 17.0.5 with PID 9608 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:10:40 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:10:40 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:10:40 [main] INFO  : Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:10:41 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:10:41 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:10:41 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:10:41 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:10:41 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:10:41 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@356fa0d1
+2024-02-27 16:10:41 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:10:42 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:10:42 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:10:43 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:10:43 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:10:43 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c3f47ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ca9ffc0, org.springframework.security.web.context.SecurityContextHolderFilter@310db5c4, org.springframework.security.web.header.HeaderWriterFilter@27a717a7, org.springframework.web.filter.CorsFilter@e316971, org.springframework.security.web.authentication.logout.LogoutFilter@7d2ccd7f, com.hrbp.feedback.auth.JwtAuthorizationFilter@1e5190bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@589dd717, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4eba6e1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@808f65, org.springframework.security.web.session.SessionManagementFilter@7c27ed2f, org.springframework.security.web.access.ExceptionTranslationFilter@77c66ac2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c3f9618]
+2024-02-27 16:10:44 [main] INFO  : Started EmployeeServiceTest in 4.316 seconds (process running for 5.556)
+2024-02-27 16:10:45 [main] INFO  : getRecordsForDashboard(-) started
+2024-02-27 16:10:45 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:10:45 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:10:45 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:11:57 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.EmployeeServiceTest]: EmployeeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:11:57 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.EmployeeServiceTest
+2024-02-27 16:11:57 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:11:57 [main] INFO  : Starting EmployeeServiceTest using Java 17.0.5 with PID 5480 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:11:57 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:11:58 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:11:58 [main] INFO  : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:11:58 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:11:58 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:11:58 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:11:59 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:11:59 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:11:59 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@356fa0d1
+2024-02-27 16:11:59 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:12:00 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:12:00 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:12:00 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:12:00 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:12:01 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c3f47ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ca9ffc0, org.springframework.security.web.context.SecurityContextHolderFilter@310db5c4, org.springframework.security.web.header.HeaderWriterFilter@27a717a7, org.springframework.web.filter.CorsFilter@e316971, org.springframework.security.web.authentication.logout.LogoutFilter@7d2ccd7f, com.hrbp.feedback.auth.JwtAuthorizationFilter@1e5190bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@589dd717, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4eba6e1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@808f65, org.springframework.security.web.session.SessionManagementFilter@7c27ed2f, org.springframework.security.web.access.ExceptionTranslationFilter@77c66ac2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c3f9618]
+2024-02-27 16:12:01 [main] INFO  : Started EmployeeServiceTest in 4.586 seconds (process running for 5.749)
+2024-02-27 16:12:02 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:12:02 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:12:02 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:12:58 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.HrbpFeedbackSystemApplicationTests]: HrbpFeedbackSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:12:58 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.HrbpFeedbackSystemApplicationTests
+2024-02-27 16:12:58 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:12:58 [main] INFO  : Starting HrbpFeedbackSystemApplicationTests using Java 17.0.5 with PID 4220 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:12:58 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:12:59 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:12:59 [main] INFO  : Finished Spring Data repository scanning in 131 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:13:00 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:13:00 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:13:00 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:13:01 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:13:01 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:13:01 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@369ad283
+2024-02-27 16:13:01 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:13:03 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:13:03 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:13:03 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:13:03 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:13:04 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e418db4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f409a57, org.springframework.security.web.context.SecurityContextHolderFilter@60c044a3, org.springframework.security.web.header.HeaderWriterFilter@1d15a08b, org.springframework.web.filter.CorsFilter@287581b1, org.springframework.security.web.authentication.logout.LogoutFilter@457eb000, com.hrbp.feedback.auth.JwtAuthorizationFilter@454048e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c96d596, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4874d75e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53811376, org.springframework.security.web.session.SessionManagementFilter@b1d9b58, org.springframework.security.web.access.ExceptionTranslationFilter@2a9be4b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@12477d0e]
+2024-02-27 16:13:05 [main] INFO  : Started HrbpFeedbackSystemApplicationTests in 6.428 seconds (process running for 8.52)
+2024-02-27 16:13:05 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.controller.EmployeeControllerTest]: EmployeeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:13:05 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.controller.EmployeeControllerTest
+2024-02-27 16:13:06 [main] INFO  : Initializing Spring TestDispatcherServlet ''
+2024-02-27 16:13:06 [main] INFO  : Initializing Servlet ''
+2024-02-27 16:13:06 [main] INFO  : Completed initialization in 0 ms
+2024-02-27 16:13:06 [main] WARN  : No mapping for GET /employeeDetails/1
+2024-02-27 16:13:06 [main] WARN  : No endpoint GET /employeeDetails/1.
+2024-02-27 16:13:06 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:13:06 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:13:06 [main] INFO  : getFeedback(-) started
+2024-02-27 16:13:06 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.EmployeeServiceTest]: EmployeeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:13:06 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.EmployeeServiceTest
+2024-02-27 16:13:07 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:13:07 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:13:07 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:15:46 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.EmployeeServiceTest]: EmployeeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:15:46 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.EmployeeServiceTest
+2024-02-27 16:15:46 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:15:47 [main] INFO  : Starting EmployeeServiceTest using Java 17.0.5 with PID 18836 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:15:47 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:15:47 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:15:47 [main] INFO  : Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:15:48 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:15:48 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:15:48 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:15:48 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:15:48 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:15:48 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31533eb1
+2024-02-27 16:15:48 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:15:49 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:15:49 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:15:50 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:15:50 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:15:50 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@36b4cbb8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57cfd353, org.springframework.security.web.context.SecurityContextHolderFilter@1b12c870, org.springframework.security.web.header.HeaderWriterFilter@25e9f5e6, org.springframework.web.filter.CorsFilter@4bd29a01, org.springframework.security.web.authentication.logout.LogoutFilter@7dc16d33, com.hrbp.feedback.auth.JwtAuthorizationFilter@6ace3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ddd5715, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d88d9d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a4a8a33, org.springframework.security.web.session.SessionManagementFilter@5ccc07ae, org.springframework.security.web.access.ExceptionTranslationFilter@72090a80, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10bf2185]
+2024-02-27 16:15:51 [main] INFO  : Started EmployeeServiceTest in 4.332 seconds (process running for 5.499)
+2024-02-27 16:15:52 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:15:52 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:15:52 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:16:10 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.EmployeeServiceTest]: EmployeeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:16:10 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.EmployeeServiceTest
+2024-02-27 16:16:10 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:16:10 [main] INFO  : Starting EmployeeServiceTest using Java 17.0.5 with PID 21632 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:16:10 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:16:11 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:16:12 [main] INFO  : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:16:12 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:16:12 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:16:12 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:16:13 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:16:13 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:16:13 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12e7664b
+2024-02-27 16:16:13 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:16:15 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:16:15 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:16:15 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:16:15 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:16:16 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5064fecc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65c5d00a, org.springframework.security.web.context.SecurityContextHolderFilter@69764b66, org.springframework.security.web.header.HeaderWriterFilter@e6d2e5, org.springframework.web.filter.CorsFilter@48f345c, org.springframework.security.web.authentication.logout.LogoutFilter@e2a1643, com.hrbp.feedback.auth.JwtAuthorizationFilter@6e5d2207, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3befad01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4217145f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f5f89e7, org.springframework.security.web.session.SessionManagementFilter@cbaa846, org.springframework.security.web.access.ExceptionTranslationFilter@de8abc9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2bff941e]
+2024-02-27 16:16:16 [main] INFO  : Started EmployeeServiceTest in 6.415 seconds (process running for 8.348)
+2024-02-27 16:16:19 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:16:19 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:16:19 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:18:08 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:18:08 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:18:08 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:18:08 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 17416 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:18:08 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:18:09 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:18:09 [main] INFO  : Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:18:09 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:18:09 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:18:09 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:18:10 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:18:10 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:18:10 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79295932
+2024-02-27 16:18:10 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:18:11 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:18:11 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:18:11 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:18:11 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:18:12 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@56540a58, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15c0a8ad, org.springframework.security.web.context.SecurityContextHolderFilter@12c55199, org.springframework.security.web.header.HeaderWriterFilter@1268ac94, org.springframework.web.filter.CorsFilter@10bf2185, org.springframework.security.web.authentication.logout.LogoutFilter@69ca71b3, com.hrbp.feedback.auth.JwtAuthorizationFilter@1c25385a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5565d718, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4832813d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14c06f50, org.springframework.security.web.session.SessionManagementFilter@7280785f, org.springframework.security.web.access.ExceptionTranslationFilter@59ffb0af, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49ed3b76]
+2024-02-27 16:18:12 [main] INFO  : Started FeedbackServiceTest in 4.419 seconds (process running for 5.541)
+2024-02-27 16:18:13 [main] INFO  : getFeedback(-) started
+2024-02-27 16:18:13 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:18:13 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:18:13 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:22:34 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:22:34 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:22:35 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:22:35 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 24816 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:22:35 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:22:35 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:22:36 [main] INFO  : Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:22:36 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:22:36 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:22:36 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:22:36 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:22:36 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:22:37 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@343d1d25
+2024-02-27 16:22:37 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:22:38 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:22:38 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:22:38 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:22:38 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:22:39 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6230a15a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7225f871, org.springframework.security.web.context.SecurityContextHolderFilter@70c3483b, org.springframework.security.web.header.HeaderWriterFilter@47858d7c, org.springframework.web.filter.CorsFilter@1bff4cb9, org.springframework.security.web.authentication.logout.LogoutFilter@7785430c, com.hrbp.feedback.auth.JwtAuthorizationFilter@63a9af28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ccc07ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ab5e63, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c521a79, org.springframework.security.web.session.SessionManagementFilter@63f6811e, org.springframework.security.web.access.ExceptionTranslationFilter@7197b96c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ca9ffc0]
+2024-02-27 16:22:39 [main] INFO  : Started FeedbackServiceTest in 4.393 seconds (process running for 5.613)
+2024-02-27 16:22:40 [main] INFO  : getFeedback(-) started
+2024-02-27 16:22:40 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:22:40 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:22:40 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:22:58 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:22:58 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:22:58 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:22:59 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 10244 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:22:59 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:23:00 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:23:00 [main] INFO  : Finished Spring Data repository scanning in 76 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:23:00 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:23:01 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:23:01 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:23:01 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:23:01 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:23:01 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@307f6602
+2024-02-27 16:23:01 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:23:03 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:23:03 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:23:03 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:23:04 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:23:04 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7338e730, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e3bbb12, org.springframework.security.web.context.SecurityContextHolderFilter@62723b05, org.springframework.security.web.header.HeaderWriterFilter@343de833, org.springframework.web.filter.CorsFilter@5790f77e, org.springframework.security.web.authentication.logout.LogoutFilter@cd7dee8, com.hrbp.feedback.auth.JwtAuthorizationFilter@485b4ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8fbae48, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fb6a13a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c8b9022, org.springframework.security.web.session.SessionManagementFilter@64bc069f, org.springframework.security.web.access.ExceptionTranslationFilter@79cff8ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ba9111b]
+2024-02-27 16:23:05 [main] INFO  : Started FeedbackServiceTest in 6.458 seconds (process running for 8.348)
+2024-02-27 16:23:07 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:23:07 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:23:07 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:23:28 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.HrbpFeedbackSystemApplicationTests]: HrbpFeedbackSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:23:28 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.HrbpFeedbackSystemApplicationTests
+2024-02-27 16:23:29 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:23:29 [main] INFO  : Starting HrbpFeedbackSystemApplicationTests using Java 17.0.5 with PID 23396 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:23:29 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:23:30 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:23:30 [main] INFO  : Finished Spring Data repository scanning in 78 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:23:31 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:23:31 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:23:31 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:23:31 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:23:31 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:23:32 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66143420
+2024-02-27 16:23:32 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:23:33 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:23:33 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:23:34 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:23:34 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:23:35 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@181d8dd9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a5bf086, org.springframework.security.web.context.SecurityContextHolderFilter@36a37096, org.springframework.security.web.header.HeaderWriterFilter@61fdb541, org.springframework.web.filter.CorsFilter@210012d1, org.springframework.security.web.authentication.logout.LogoutFilter@25371277, com.hrbp.feedback.auth.JwtAuthorizationFilter@55c5690d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5711c8e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4545b652, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e41d93b, org.springframework.security.web.session.SessionManagementFilter@685c2ee6, org.springframework.security.web.access.ExceptionTranslationFilter@6efb7aca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@138694a5]
+2024-02-27 16:23:35 [main] INFO  : Started HrbpFeedbackSystemApplicationTests in 6.203 seconds (process running for 8.225)
+2024-02-27 16:23:35 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.controller.EmployeeControllerTest]: EmployeeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:23:36 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.controller.EmployeeControllerTest
+2024-02-27 16:23:36 [main] INFO  : Initializing Spring TestDispatcherServlet ''
+2024-02-27 16:23:36 [main] INFO  : Initializing Servlet ''
+2024-02-27 16:23:36 [main] INFO  : Completed initialization in 1 ms
+2024-02-27 16:23:36 [main] WARN  : No mapping for GET /employeeDetails/1
+2024-02-27 16:23:36 [main] WARN  : No endpoint GET /employeeDetails/1.
+2024-02-27 16:23:36 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:23:36 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:23:36 [main] INFO  : getFeedback(-) started
+2024-02-27 16:23:36 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.EmployeeServiceTest]: EmployeeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:23:36 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.EmployeeServiceTest
+2024-02-27 16:23:38 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:23:38 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:23:38 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:28:43 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:28:43 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:28:43 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:28:43 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 22276 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:28:43 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:28:44 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:28:44 [main] INFO  : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:28:45 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:28:45 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:28:45 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:28:45 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:28:45 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:28:45 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e5c5e6
+2024-02-27 16:28:45 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:28:46 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:28:46 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:28:46 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:28:47 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:28:47 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1bff4cb9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c521a79, org.springframework.security.web.context.SecurityContextHolderFilter@5ccc07ae, org.springframework.security.web.header.HeaderWriterFilter@16cc5e51, org.springframework.web.filter.CorsFilter@6b0f50d8, org.springframework.security.web.authentication.logout.LogoutFilter@121ec5c2, com.hrbp.feedback.auth.JwtAuthorizationFilter@530bd77b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a434cdd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b12c870, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36b4cbb8, org.springframework.security.web.session.SessionManagementFilter@4832813d, org.springframework.security.web.access.ExceptionTranslationFilter@47858d7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@808f65]
+2024-02-27 16:28:47 [main] INFO  : Started FeedbackServiceTest in 4.243 seconds (process running for 5.418)
+2024-02-27 16:28:48 [main] INFO  : getFeedback(-) started
+2024-02-27 16:28:48 [main] INFO  : dateTimeFormat(-)
+2024-02-27 16:28:48 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:28:48 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:28:48 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:30:33 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:30:33 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:30:33 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:30:34 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 10944 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:30:34 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:30:34 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:30:34 [main] INFO  : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:30:35 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:30:35 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:30:35 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:30:35 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:30:35 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:30:35 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51508029
+2024-02-27 16:30:35 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:30:36 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:30:36 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:30:37 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:30:37 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:30:37 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ca9ffc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e316971, org.springframework.security.web.context.SecurityContextHolderFilter@7280785f, org.springframework.security.web.header.HeaderWriterFilter@1d2b49b2, org.springframework.web.filter.CorsFilter@808f65, org.springframework.security.web.authentication.logout.LogoutFilter@7ae49d52, com.hrbp.feedback.auth.JwtAuthorizationFilter@733345f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eba6e1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12c55199, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56540a58, org.springframework.security.web.session.SessionManagementFilter@3503e68e, org.springframework.security.web.access.ExceptionTranslationFilter@12e8c5c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@deb0c0e]
+2024-02-27 16:30:38 [main] INFO  : Started FeedbackServiceTest in 4.295 seconds (process running for 5.447)
+2024-02-27 16:30:38 [main] INFO  : getFeedback(-) started
+2024-02-27 16:30:38 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:30:38 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:30:38 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:34:18 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:34:18 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:34:18 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:34:19 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 19040 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:34:19 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:34:19 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:34:19 [main] INFO  : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:34:20 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:34:20 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:34:20 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:34:20 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:34:20 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:34:20 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e5c5e6
+2024-02-27 16:34:20 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:34:21 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:34:21 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:34:22 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:34:22 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:34:22 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1bff4cb9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c521a79, org.springframework.security.web.context.SecurityContextHolderFilter@5ccc07ae, org.springframework.security.web.header.HeaderWriterFilter@16cc5e51, org.springframework.web.filter.CorsFilter@6b0f50d8, org.springframework.security.web.authentication.logout.LogoutFilter@121ec5c2, com.hrbp.feedback.auth.JwtAuthorizationFilter@530bd77b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a434cdd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b12c870, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36b4cbb8, org.springframework.security.web.session.SessionManagementFilter@4832813d, org.springframework.security.web.access.ExceptionTranslationFilter@47858d7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@808f65]
+2024-02-27 16:34:23 [main] INFO  : Started FeedbackServiceTest in 4.243 seconds (process running for 5.366)
+2024-02-27 16:34:23 [main] INFO  : getFeedback(-) started
+2024-02-27 16:34:23 [main] INFO  : dateTimeFormat(-)
+2024-02-27 16:34:23 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:34:23 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:34:24 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:34:48 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:34:48 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:34:48 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:34:48 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 23980 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:34:48 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:34:49 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:34:49 [main] INFO  : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:34:49 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:34:49 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:34:49 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:34:50 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:34:50 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:34:50 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e5c5e6
+2024-02-27 16:34:50 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:34:51 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:34:51 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:34:51 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:34:51 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:34:52 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1bff4cb9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c521a79, org.springframework.security.web.context.SecurityContextHolderFilter@5ccc07ae, org.springframework.security.web.header.HeaderWriterFilter@16cc5e51, org.springframework.web.filter.CorsFilter@6b0f50d8, org.springframework.security.web.authentication.logout.LogoutFilter@121ec5c2, com.hrbp.feedback.auth.JwtAuthorizationFilter@530bd77b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a434cdd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b12c870, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36b4cbb8, org.springframework.security.web.session.SessionManagementFilter@4832813d, org.springframework.security.web.access.ExceptionTranslationFilter@47858d7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@808f65]
+2024-02-27 16:34:52 [main] INFO  : Started FeedbackServiceTest in 4.334 seconds (process running for 5.485)
+2024-02-27 16:34:53 [main] INFO  : getFeedback(-) started
+2024-02-27 16:34:53 [main] INFO  : dateTimeFormat(-)
+2024-02-27 16:34:53 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:34:53 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:34:53 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:38:24 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:38:24 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:38:24 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:38:24 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 24784 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:38:24 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:38:25 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:38:25 [main] INFO  : Finished Spring Data repository scanning in 78 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:38:25 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:38:25 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:38:25 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:38:26 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:38:26 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:38:26 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51508029
+2024-02-27 16:38:26 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:38:27 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:38:27 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:38:27 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:38:27 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:38:28 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ca9ffc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e316971, org.springframework.security.web.context.SecurityContextHolderFilter@7280785f, org.springframework.security.web.header.HeaderWriterFilter@1d2b49b2, org.springframework.web.filter.CorsFilter@808f65, org.springframework.security.web.authentication.logout.LogoutFilter@7ae49d52, com.hrbp.feedback.auth.JwtAuthorizationFilter@733345f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eba6e1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12c55199, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56540a58, org.springframework.security.web.session.SessionManagementFilter@3503e68e, org.springframework.security.web.access.ExceptionTranslationFilter@12e8c5c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@deb0c0e]
+2024-02-27 16:38:28 [main] INFO  : Started FeedbackServiceTest in 4.356 seconds (process running for 5.559)
+2024-02-27 16:38:29 [main] INFO  : getFeedback(-) started
+2024-02-27 16:38:29 [main] INFO  : dateTimeFormat(-)
+2024-02-27 16:38:29 [main] INFO  : dateTimeFormat(-)
+2024-02-27 16:38:29 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:38:29 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:38:29 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:39:04 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:39:04 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:39:04 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:39:05 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 2656 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:39:05 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:39:06 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:39:06 [main] INFO  : Finished Spring Data repository scanning in 78 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:39:06 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:39:06 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:39:06 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:39:07 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:39:07 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:39:07 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51508029
+2024-02-27 16:39:07 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:39:08 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:39:08 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:39:08 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:39:08 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:39:09 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ca9ffc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e316971, org.springframework.security.web.context.SecurityContextHolderFilter@7280785f, org.springframework.security.web.header.HeaderWriterFilter@1d2b49b2, org.springframework.web.filter.CorsFilter@808f65, org.springframework.security.web.authentication.logout.LogoutFilter@7ae49d52, com.hrbp.feedback.auth.JwtAuthorizationFilter@733345f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eba6e1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12c55199, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56540a58, org.springframework.security.web.session.SessionManagementFilter@3503e68e, org.springframework.security.web.access.ExceptionTranslationFilter@12e8c5c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@deb0c0e]
+2024-02-27 16:39:09 [main] INFO  : Started FeedbackServiceTest in 4.753 seconds (process running for 6.165)
+2024-02-27 16:39:10 [main] INFO  : getFeedback(-) started
+2024-02-27 16:39:10 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:39:10 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:39:10 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:39:27 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:39:28 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:39:28 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:39:28 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 23036 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:39:28 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:39:28 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:39:29 [main] INFO  : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:39:29 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:39:29 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:39:29 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:39:29 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:39:29 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:39:30 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e5c5e6
+2024-02-27 16:39:30 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:39:31 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:39:31 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:39:31 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:39:31 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:39:32 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1bff4cb9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c521a79, org.springframework.security.web.context.SecurityContextHolderFilter@5ccc07ae, org.springframework.security.web.header.HeaderWriterFilter@16cc5e51, org.springframework.web.filter.CorsFilter@6b0f50d8, org.springframework.security.web.authentication.logout.LogoutFilter@121ec5c2, com.hrbp.feedback.auth.JwtAuthorizationFilter@530bd77b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a434cdd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b12c870, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36b4cbb8, org.springframework.security.web.session.SessionManagementFilter@4832813d, org.springframework.security.web.access.ExceptionTranslationFilter@47858d7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@808f65]
+2024-02-27 16:39:32 [main] INFO  : Started FeedbackServiceTest in 4.273 seconds (process running for 5.407)
+2024-02-27 16:39:33 [main] INFO  : getFeedback(-) started
+2024-02-27 16:39:33 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:39:33 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:39:33 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:40:02 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:40:02 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:40:03 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:40:03 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 584 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:40:03 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:40:03 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:40:03 [main] INFO  : Finished Spring Data repository scanning in 79 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:40:04 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:40:04 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:40:04 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:40:04 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:40:04 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:40:05 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f20b6fe
+2024-02-27 16:40:05 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:40:06 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:40:06 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:40:06 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:40:06 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:40:07 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e316971, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@808f65, org.springframework.security.web.context.SecurityContextHolderFilter@589dd717, org.springframework.security.web.header.HeaderWriterFilter@59ffb0af, org.springframework.web.filter.CorsFilter@56540a58, org.springframework.security.web.authentication.logout.LogoutFilter@40ef1198, com.hrbp.feedback.auth.JwtAuthorizationFilter@5add7380, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12c55199, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63f6811e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15c0a8ad, org.springframework.security.web.session.SessionManagementFilter@7c2d4398, org.springframework.security.web.access.ExceptionTranslationFilter@27a717a7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6385b07d]
+2024-02-27 16:40:07 [main] INFO  : Started FeedbackServiceTest in 4.55 seconds (process running for 5.668)
+2024-02-27 16:40:08 [main] INFO  : getFeedback(-) started
+2024-02-27 16:40:08 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:40:08 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:40:08 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:42:11 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:42:11 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:42:20 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:42:20 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:42:20 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:42:20 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 21000 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:42:20 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:42:21 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:42:21 [main] INFO  : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:42:22 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:42:22 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:42:22 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:42:22 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:42:22 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:42:22 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51508029
+2024-02-27 16:42:22 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:42:23 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:42:23 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:42:24 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:42:24 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:42:24 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ca9ffc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e316971, org.springframework.security.web.context.SecurityContextHolderFilter@7280785f, org.springframework.security.web.header.HeaderWriterFilter@1d2b49b2, org.springframework.web.filter.CorsFilter@808f65, org.springframework.security.web.authentication.logout.LogoutFilter@7ae49d52, com.hrbp.feedback.auth.JwtAuthorizationFilter@733345f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eba6e1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12c55199, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56540a58, org.springframework.security.web.session.SessionManagementFilter@3503e68e, org.springframework.security.web.access.ExceptionTranslationFilter@12e8c5c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@deb0c0e]
+2024-02-27 16:42:25 [main] INFO  : Started FeedbackServiceTest in 4.492 seconds (process running for 5.777)
+2024-02-27 16:42:25 [main] INFO  : getFeedback(-) started
+2024-02-27 16:42:25 [main] INFO  : dateTimeFormat(-)
+2024-02-27 16:42:26 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:42:26 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:42:26 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:42:49 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:42:49 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:42:50 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:42:50 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 19376 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:42:50 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:42:50 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:42:51 [main] INFO  : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:42:51 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:42:51 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:42:51 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:42:51 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:42:51 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:42:52 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51508029
+2024-02-27 16:42:52 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:42:53 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:42:53 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:42:53 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:42:53 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:42:54 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ca9ffc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e316971, org.springframework.security.web.context.SecurityContextHolderFilter@7280785f, org.springframework.security.web.header.HeaderWriterFilter@1d2b49b2, org.springframework.web.filter.CorsFilter@808f65, org.springframework.security.web.authentication.logout.LogoutFilter@7ae49d52, com.hrbp.feedback.auth.JwtAuthorizationFilter@733345f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eba6e1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12c55199, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56540a58, org.springframework.security.web.session.SessionManagementFilter@3503e68e, org.springframework.security.web.access.ExceptionTranslationFilter@12e8c5c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@deb0c0e]
+2024-02-27 16:42:54 [main] INFO  : Started FeedbackServiceTest in 4.401 seconds (process running for 5.515)
+2024-02-27 16:42:55 [main] INFO  : getFeedback(-) started
+2024-02-27 16:42:55 [main] INFO  : dateTimeFormat(-)
+2024-02-27 16:42:55 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:42:55 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:42:55 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-02-27 16:44:17 [main] INFO  : Could not detect default configuration classes for test class [com.hrbp.feedback.service.FeedbackServiceTest]: FeedbackServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-27 16:44:17 [main] INFO  : Found @SpringBootConfiguration com.hrbp.feedback.HrbpFeedbackSystemApplication for test class com.hrbp.feedback.service.FeedbackServiceTest
+2024-02-27 16:44:17 [main] INFO  : Restart disabled due to context in which it is running
+2024-02-27 16:44:18 [main] INFO  : Starting FeedbackServiceTest using Java 17.0.5 with PID 2360 (started by anandjan in C:\Users\anandjan\Downloads\New folder\hrbpbackend)
+2024-02-27 16:44:18 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-02-27 16:44:18 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-27 16:44:18 [main] INFO  : Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
+2024-02-27 16:44:19 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-27 16:44:19 [main] INFO  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-27 16:44:19 [main] INFO  : HHH000026: Second-level cache disabled
+2024-02-27 16:44:19 [main] INFO  : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-27 16:44:19 [main] INFO  : HikariPool-1 - Starting...
+2024-02-27 16:44:19 [main] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@343d1d25
+2024-02-27 16:44:19 [main] INFO  : HikariPool-1 - Start completed.
+2024-02-27 16:44:20 [main] INFO  : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-27 16:44:20 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:44:21 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-27 16:44:21 [main] INFO  : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-27 16:44:21 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6230a15a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7225f871, org.springframework.security.web.context.SecurityContextHolderFilter@70c3483b, org.springframework.security.web.header.HeaderWriterFilter@47858d7c, org.springframework.web.filter.CorsFilter@1bff4cb9, org.springframework.security.web.authentication.logout.LogoutFilter@7785430c, com.hrbp.feedback.auth.JwtAuthorizationFilter@63a9af28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ccc07ae, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ab5e63, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c521a79, org.springframework.security.web.session.SessionManagementFilter@63f6811e, org.springframework.security.web.access.ExceptionTranslationFilter@7197b96c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ca9ffc0]
+2024-02-27 16:44:22 [main] INFO  : Started FeedbackServiceTest in 4.22 seconds (process running for 5.375)
+2024-02-27 16:44:22 [main] INFO  : getFeedback(-) started
+2024-02-27 16:44:22 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-27 16:44:22 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-02-27 16:44:22 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

@@ -89,7 +89,7 @@ public class FeedbackController {
 		return ResponseEntity.ok(feedbacks);
 	}
 
-	private String getRoleFromEmployeeId(int employeeId) {
+	public String getRoleFromEmployeeId(int employeeId) {
 		Optional<EmployeeDTO> employeeDto = employeeService.findEmployeeDtoById(employeeId);
 		if (employeeDto.isEmpty()) {
 			throw new EmployeeNotFoundException("Employee not found with ID: " + employeeId);
